@@ -1,0 +1,12 @@
+apf_node:
+  ros__parameters:
+    K_att: 5.0
+    K_rep: 2.0
+    Rho_knot: 0.3
+
+apf_controller:
+  ros__parameters:
+    Kv: 0.5
+    Kw: 0.5
+    alpha: 0.01
+    move: True

@@ -1,0 +1,9 @@
+[console_scripts]
+cmd_robot = lidar_odom.cmd_robot:main
+filter_lidar = lidar_odom.filter_lidar:main
+icp_localization_node = lidar_odom.icp_localization_node:main
+icp_mapping = lidar_odom.icp_mapping:main
+logger = lidar_odom.logger:main
+logger_map = lidar_odom.logger_map:main
+map_loader = lidar_odom.map_loader:main
+record_lidar = lidar_odom.record_lidar:main

@@ -1,0 +1,5 @@
+  File "/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_mapping.py", line 136
+    (float(x), float(y), 0.0 for x, y, in all_points)
+                             ^^^
+SyntaxError: invalid syntax
+

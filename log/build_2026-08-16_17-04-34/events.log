@@ -1,0 +1,124 @@
+[0.000000] (-) TimerEvent: {}
+[0.005443] (-) JobUnselected: {'identifier': 'apf_pkg'}
+[0.006119] (-) JobUnselected: {'identifier': 'ekf_pkg'}
+[0.006160] (-) JobUnselected: {'identifier': 'odom_cmd'}
+[0.006185] (-) JobUnselected: {'identifier': 'robot_bringup'}
+[0.006209] (lidar_odom) JobQueued: {'identifier': 'lidar_odom', 'dependencies': OrderedDict()}
+[0.010954] (lidar_odom) JobStarted: {'identifier': 'lidar_odom'}
+[0.103498] (-) TimerEvent: {}
+[0.236250] (-) TimerEvent: {}
+[0.346154] (-) TimerEvent: {}
+[0.449343] (-) TimerEvent: {}
+[0.551983] (-) TimerEvent: {}
+[0.653623] (-) TimerEvent: {}
+[0.754970] (-) TimerEvent: {}
+[0.855696] (-) TimerEvent: {}
+[0.956362] (-) TimerEvent: {}
+[1.057480] (-) TimerEvent: {}
+[1.158833] (-) TimerEvent: {}
+[1.260282] (-) TimerEvent: {}
+[1.361273] (-) TimerEvent: {}
+[1.476008] (-) TimerEvent: {}
+[1.578899] (-) TimerEvent: {}
+[1.680599] (-) TimerEvent: {}
+[1.782314] (-) TimerEvent: {}
+[1.883340] (-) TimerEvent: {}
+[1.984297] (-) TimerEvent: {}
+[2.085377] (-) TimerEvent: {}
+[2.185992] (-) TimerEvent: {}
+[2.288769] (-) TimerEvent: {}
+[2.391295] (-) TimerEvent: {}
+[2.493763] (-) TimerEvent: {}
+[2.594915] (-) TimerEvent: {}
+[2.697508] (-) TimerEvent: {}
+[2.798716] (-) TimerEvent: {}
+[2.900089] (-) TimerEvent: {}
+[3.001026] (-) TimerEvent: {}
+[3.102193] (-) TimerEvent: {}
+[3.202990] (-) TimerEvent: {}
+[3.308359] (-) TimerEvent: {}
+[3.409584] (-) TimerEvent: {}
+[3.510145] (-) TimerEvent: {}
+[3.611315] (-) TimerEvent: {}
+[3.713386] (-) TimerEvent: {}
+[3.831470] (-) TimerEvent: {}
+[3.934712] (-) TimerEvent: {}
+[4.038119] (-) TimerEvent: {}
+[4.156305] (-) TimerEvent: {}
+[4.211543] (lidar_odom) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lidar_odom', 'build', '--build-base', '/home/vboxuser/apf_ws/build/lidar_odom/build', 'install', '--record', '/home/vboxuser/apf_ws/build/lidar_odom/install.log', '--install-scripts', '$base/lib/lidar_odom', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vboxuser/apf_ws/src/lidar_odom', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vboxuser', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vboxuser', 'OLDPWD': '/home/vboxuser', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2288', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/home/vboxuser/ros2_ws/src', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vboxuser/apf_ws/install:/home/vboxuser/myturtlebot_ws/install:/home/vboxuser/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vboxuser', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vboxuser', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/huzaifatahir:@/tmp/.ICE-unix/2262,unix/huzaifatahir:/tmp/.ICE-unix/2262', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fa883ba8_4f01_4e82_bde3_bfcfe66039d4', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FP83T3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.96', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/vboxuser/apf_ws/install/robot_bringup:/home/vboxuser/apf_ws/install/odom_cmd:/home/vboxuser/apf_ws/install/log_pkg:/home/vboxuser/apf_ws/install/lidar_odom:/home/vboxuser/apf_ws/install/ekf_pkg:/home/vboxuser/apf_ws/install/apf_pkg:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization:/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vboxuser/apf_ws/build/lidar_odom', 'TURTLEBOT3_MODEL': 'burger', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vboxuser/apf_ws/build/lidar_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[4.261575] (-) TimerEvent: {}
+[4.363736] (-) TimerEvent: {}
+[4.466287] (-) TimerEvent: {}
+[4.567331] (-) TimerEvent: {}
+[4.669135] (-) TimerEvent: {}
+[4.770319] (-) TimerEvent: {}
+[4.874131] (-) TimerEvent: {}
+[4.977908] (-) TimerEvent: {}
+[5.080869] (-) TimerEvent: {}
+[5.122565] (lidar_odom) StdoutLine: {'line': b'running egg_info\n'}
+[5.124413] (lidar_odom) StdoutLine: {'line': b'creating ../../build/lidar_odom/lidar_odom.egg-info\n'}
+[5.172586] (lidar_odom) StdoutLine: {'line': b'writing ../../build/lidar_odom/lidar_odom.egg-info/PKG-INFO\n'}
+[5.173667] (lidar_odom) StdoutLine: {'line': b'writing dependency_links to ../../build/lidar_odom/lidar_odom.egg-info/dependency_links.txt\n'}
+[5.174334] (lidar_odom) StdoutLine: {'line': b'writing entry points to ../../build/lidar_odom/lidar_odom.egg-info/entry_points.txt\n'}
+[5.175107] (lidar_odom) StdoutLine: {'line': b'writing requirements to ../../build/lidar_odom/lidar_odom.egg-info/requires.txt\n'}
+[5.175530] (lidar_odom) StdoutLine: {'line': b'writing top-level names to ../../build/lidar_odom/lidar_odom.egg-info/top_level.txt\n'}
+[5.176361] (lidar_odom) StdoutLine: {'line': b"writing manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'\n"}
+[5.182203] (-) TimerEvent: {}
+[5.285026] (-) TimerEvent: {}
+[5.309628] (lidar_odom) StdoutLine: {'line': b"reading manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'\n"}
+[5.311687] (lidar_odom) StdoutLine: {'line': b"writing manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'\n"}
+[5.312311] (lidar_odom) StdoutLine: {'line': b'running build\n'}
+[5.312471] (lidar_odom) StdoutLine: {'line': b'running build_py\n'}
+[5.313076] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/build/lidar_odom/build\n'}
+[5.313264] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/build/lidar_odom/build/lib\n'}
+[5.313425] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.314852] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/__init__.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.315321] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/icp_localization_node.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.317180] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/logger.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.318624] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/icp_mapping.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.320989] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/map_loader.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.322985] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/cmd_robot.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[5.324466] (lidar_odom) StdoutLine: {'line': b'running install\n'}
+[5.334779] (lidar_odom) StdoutLine: {'line': b'running install_lib\n'}
+[5.386967] (-) TimerEvent: {}
+[5.393499] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.396684] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/__init__.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.397744] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/icp_localization_node.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.398376] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/logger.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.398492] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/icp_mapping.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.398589] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/map_loader.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.398667] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/cmd_robot.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[5.401646] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/__init__.py to __init__.cpython-312.pyc\n'}
+[5.402602] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_localization_node.py to icp_localization_node.cpython-312.pyc\n'}
+[5.411130] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/logger.py to logger.cpython-312.pyc\n'}
+[5.415556] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_mapping.py to icp_mapping.cpython-312.pyc\n'}
+[5.418617] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/map_loader.py to map_loader.cpython-312.pyc\n'}
+[5.422357] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/cmd_robot.py to cmd_robot.cpython-312.pyc\n'}
+[5.424678] (lidar_odom) StdoutLine: {'line': b'running install_data\n'}
+[5.424902] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index\n'}
+[5.426595] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index/resource_index\n'}
+[5.426773] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index/resource_index/packages\n'}
+[5.427325] (lidar_odom) StdoutLine: {'line': b'copying resource/lidar_odom -> /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index/resource_index/packages\n'}
+[5.427786] (lidar_odom) StdoutLine: {'line': b'copying package.xml -> /home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom\n'}
+[5.428518] (lidar_odom) StdoutLine: {'line': b'creating /home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/launch\n'}
+[5.429235] (lidar_odom) StdoutLine: {'line': b'copying launch/icp_log.launch.py -> /home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/launch\n'}
+[5.431679] (lidar_odom) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.487233] (lidar_odom) StdoutLine: {'line': b'Copying ../../build/lidar_odom/lidar_odom.egg-info to /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom-0.0.0-py3.12.egg-info\n'}
+[5.489196] (-) TimerEvent: {}
+[5.494983] (lidar_odom) StdoutLine: {'line': b'running install_scripts\n'}
+[5.590424] (-) TimerEvent: {}
+[5.692028] (-) TimerEvent: {}
+[5.793043] (-) TimerEvent: {}
+[5.911764] (-) TimerEvent: {}
+[6.018509] (-) TimerEvent: {}
+[6.100428] (lidar_odom) StdoutLine: {'line': b'Installing cmd_robot script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[6.101315] (lidar_odom) StdoutLine: {'line': b'Installing icp_localization_node script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[6.102041] (lidar_odom) StdoutLine: {'line': b'Installing icp_mapping script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[6.102934] (lidar_odom) StdoutLine: {'line': b'Installing logger script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[6.106625] (lidar_odom) StdoutLine: {'line': b'Installing map_loader script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[6.107578] (lidar_odom) StdoutLine: {'line': b"writing list of installed files to '/home/vboxuser/apf_ws/build/lidar_odom/install.log'\n"}
+[6.130173] (-) TimerEvent: {}
+[6.176142] (lidar_odom) CommandEnded: {'returncode': 0}
+[6.230543] (-) TimerEvent: {}
+[6.234461] (lidar_odom) JobEnded: {'identifier': 'lidar_odom', 'rc': 0}
+[6.236512] (-) EventReactorShutdown: {}

@@ -1,0 +1,51 @@
+[3.175s] Invoking command in '/home/vboxuser/apf_ws/src/apf_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/apf_pkg build --build-base /home/vboxuser/apf_ws/build/apf_pkg/build install --record /home/vboxuser/apf_ws/build/apf_pkg/install.log --install-scripts $base/lib/apf_pkg --single-version-externally-managed install_data
+[3.845s] running egg_info
+[3.845s] creating ../../build/apf_pkg/apf_pkg.egg-info
+[3.898s] writing ../../build/apf_pkg/apf_pkg.egg-info/PKG-INFO
+[3.898s] writing dependency_links to ../../build/apf_pkg/apf_pkg.egg-info/dependency_links.txt
+[3.898s] writing entry points to ../../build/apf_pkg/apf_pkg.egg-info/entry_points.txt
+[3.898s] writing requirements to ../../build/apf_pkg/apf_pkg.egg-info/requires.txt
+[3.899s] writing top-level names to ../../build/apf_pkg/apf_pkg.egg-info/top_level.txt
+[3.899s] writing manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+[3.999s] reading manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+[4.001s] writing manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+[4.002s] running build
+[4.002s] running build_py
+[4.003s] creating /home/vboxuser/apf_ws/build/apf_pkg/build
+[4.003s] creating /home/vboxuser/apf_ws/build/apf_pkg/build/lib
+[4.004s] creating /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg
+[4.004s] copying apf_pkg/__init__.py -> /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg
+[4.008s] copying apf_pkg/logger.py -> /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg
+[4.011s] copying apf_pkg/apf_node.py -> /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg
+[4.012s] copying apf_pkg/apf_controller.py -> /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg
+[4.012s] running install
+[4.024s] running install_lib
+[4.079s] creating /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg
+[4.080s] copying /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg/__init__.py -> /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg
+[4.081s] copying /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg/logger.py -> /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg
+[4.082s] copying /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg/apf_node.py -> /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg
+[4.083s] copying /home/vboxuser/apf_ws/build/apf_pkg/build/lib/apf_pkg/apf_controller.py -> /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg
+[4.084s] byte-compiling /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg/__init__.py to __init__.cpython-312.pyc
+[4.085s] byte-compiling /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg/logger.py to logger.cpython-312.pyc
+[4.088s] byte-compiling /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg/apf_node.py to apf_node.cpython-312.pyc
+[4.093s] byte-compiling /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg/apf_controller.py to apf_controller.cpython-312.pyc
+[4.095s] running install_data
+[4.095s] creating /home/vboxuser/apf_ws/install/apf_pkg/share/ament_index
+[4.097s] creating /home/vboxuser/apf_ws/install/apf_pkg/share/ament_index/resource_index
+[4.097s] creating /home/vboxuser/apf_ws/install/apf_pkg/share/ament_index/resource_index/packages
+[4.098s] copying resource/apf_pkg -> /home/vboxuser/apf_ws/install/apf_pkg/share/ament_index/resource_index/packages
+[4.098s] copying package.xml -> /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg
+[4.098s] creating /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/launch
+[4.098s] copying launch/apf_launch.launch.py -> /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/launch
+[4.101s] copying launch/ekf_node.launch.py -> /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/launch
+[4.102s] creating /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/config
+[4.104s] copying config/apf.yaml -> /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/config
+[4.105s] copying config/ekf.yaml -> /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/config
+[4.106s] running install_egg_info
+[4.171s] Copying ../../build/apf_pkg/apf_pkg.egg-info to /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info
+[4.173s] running install_scripts
+[4.518s] Installing apf_controller script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+[4.519s] Installing apf_node script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+[4.519s] Installing logger script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+[4.519s] writing list of installed files to '/home/vboxuser/apf_ws/build/apf_pkg/install.log'
+[4.625s] Invoked command in '/home/vboxuser/apf_ws/src/apf_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/apf_pkg build --build-base /home/vboxuser/apf_ws/build/apf_pkg/build install --record /home/vboxuser/apf_ws/build/apf_pkg/install.log --install-scripts $base/lib/apf_pkg --single-version-externally-managed install_data

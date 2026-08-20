@@ -1,0 +1,25 @@
+[5.894s] Invoking command in '/home/vboxuser/apf_ws/src/ekf_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/ekf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ekf_pkg build --build-base /home/vboxuser/apf_ws/build/ekf_pkg/build install --record /home/vboxuser/apf_ws/build/ekf_pkg/install.log --install-scripts $base/lib/ekf_pkg --single-version-externally-managed install_data
+[6.563s] running egg_info
+[6.640s] writing ../../build/ekf_pkg/ekf_pkg.egg-info/PKG-INFO
+[6.661s] writing dependency_links to ../../build/ekf_pkg/ekf_pkg.egg-info/dependency_links.txt
+[6.661s] writing entry points to ../../build/ekf_pkg/ekf_pkg.egg-info/entry_points.txt
+[6.662s] writing requirements to ../../build/ekf_pkg/ekf_pkg.egg-info/requires.txt
+[6.667s] writing top-level names to ../../build/ekf_pkg/ekf_pkg.egg-info/top_level.txt
+[6.797s] reading manifest file '../../build/ekf_pkg/ekf_pkg.egg-info/SOURCES.txt'
+[6.803s] writing manifest file '../../build/ekf_pkg/ekf_pkg.egg-info/SOURCES.txt'
+[6.804s] running build
+[6.806s] running build_py
+[6.809s] copying ekf_pkg/ekf_node.py -> /home/vboxuser/apf_ws/build/ekf_pkg/build/lib/ekf_pkg
+[6.810s] running install
+[6.827s] running install_lib
+[6.905s] copying /home/vboxuser/apf_ws/build/ekf_pkg/build/lib/ekf_pkg/ekf_node.py -> /home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg
+[6.907s] byte-compiling /home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg/ekf_node.py to ekf_node.cpython-312.pyc
+[6.921s] running install_data
+[6.924s] running install_egg_info
+[6.985s] removing '/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[6.985s] Copying ../../build/ekf_pkg/ekf_pkg.egg-info to /home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg-0.0.0-py3.12.egg-info
+[7.038s] running install_scripts
+[7.359s] Installing ekf_node script to /home/vboxuser/apf_ws/install/ekf_pkg/lib/ekf_pkg
+[7.369s] Installing logger script to /home/vboxuser/apf_ws/install/ekf_pkg/lib/ekf_pkg
+[7.370s] writing list of installed files to '/home/vboxuser/apf_ws/build/ekf_pkg/install.log'
+[7.485s] Invoked command in '/home/vboxuser/apf_ws/src/ekf_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/ekf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ekf_pkg build --build-base /home/vboxuser/apf_ws/build/ekf_pkg/build install --record /home/vboxuser/apf_ws/build/ekf_pkg/install.log --install-scripts $base/lib/ekf_pkg --single-version-externally-managed install_data

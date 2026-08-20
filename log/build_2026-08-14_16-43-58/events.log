@@ -1,0 +1,281 @@
+[0.000000] (-) TimerEvent: {}
+[0.003239] (apf_pkg) JobQueued: {'identifier': 'apf_pkg', 'dependencies': OrderedDict()}
+[0.003480] (lidar_odom) JobQueued: {'identifier': 'lidar_odom', 'dependencies': OrderedDict()}
+[0.003508] (log_pkg) JobQueued: {'identifier': 'log_pkg', 'dependencies': OrderedDict()}
+[0.003523] (odom_cmd) JobQueued: {'identifier': 'odom_cmd', 'dependencies': OrderedDict()}
+[0.006421] (apf_pkg) JobStarted: {'identifier': 'apf_pkg'}
+[0.103423] (lidar_odom) JobStarted: {'identifier': 'lidar_odom'}
+[0.103597] (-) TimerEvent: {}
+[0.140812] (log_pkg) JobStarted: {'identifier': 'log_pkg'}
+[0.161348] (odom_cmd) JobStarted: {'identifier': 'odom_cmd'}
+[0.211364] (-) TimerEvent: {}
+[0.312052] (-) TimerEvent: {}
+[0.413494] (-) TimerEvent: {}
+[0.514034] (-) TimerEvent: {}
+[0.620423] (-) TimerEvent: {}
+[0.726032] (-) TimerEvent: {}
+[0.826680] (-) TimerEvent: {}
+[0.927931] (-) TimerEvent: {}
+[1.037623] (-) TimerEvent: {}
+[1.139651] (-) TimerEvent: {}
+[1.263778] (-) TimerEvent: {}
+[1.366224] (-) TimerEvent: {}
+[1.469914] (-) TimerEvent: {}
+[1.572626] (-) TimerEvent: {}
+[1.677149] (-) TimerEvent: {}
+[1.802566] (-) TimerEvent: {}
+[1.955748] (-) TimerEvent: {}
+[2.056645] (-) TimerEvent: {}
+[2.157706] (-) TimerEvent: {}
+[2.259432] (-) TimerEvent: {}
+[2.360862] (-) TimerEvent: {}
+[2.462861] (-) TimerEvent: {}
+[2.573362] (-) TimerEvent: {}
+[2.714364] (-) TimerEvent: {}
+[2.815582] (-) TimerEvent: {}
+[2.916269] (-) TimerEvent: {}
+[3.054341] (-) TimerEvent: {}
+[3.157794] (-) TimerEvent: {}
+[3.259364] (-) TimerEvent: {}
+[3.361004] (-) TimerEvent: {}
+[3.472345] (-) TimerEvent: {}
+[3.573026] (-) TimerEvent: {}
+[3.678968] (-) TimerEvent: {}
+[3.792376] (-) TimerEvent: {}
+[3.984205] (-) TimerEvent: {}
+[4.085447] (-) TimerEvent: {}
+[4.191380] (-) TimerEvent: {}
+[4.296128] (-) TimerEvent: {}
+[4.396535] (-) TimerEvent: {}
+[4.497247] (-) TimerEvent: {}
+[4.597982] (-) TimerEvent: {}
+[4.698757] (-) TimerEvent: {}
+[4.799625] (-) TimerEvent: {}
+[4.903134] (-) TimerEvent: {}
+[5.005614] (-) TimerEvent: {}
+[5.106788] (-) TimerEvent: {}
+[5.208761] (-) TimerEvent: {}
+[5.312051] (-) TimerEvent: {}
+[5.433199] (-) TimerEvent: {}
+[5.550296] (-) TimerEvent: {}
+[5.650969] (-) TimerEvent: {}
+[5.755772] (-) TimerEvent: {}
+[5.858759] (-) TimerEvent: {}
+[5.964252] (-) TimerEvent: {}
+[6.065090] (-) TimerEvent: {}
+[6.172006] (-) TimerEvent: {}
+[6.274686] (-) TimerEvent: {}
+[6.384211] (-) TimerEvent: {}
+[6.486417] (-) TimerEvent: {}
+[6.592258] (-) TimerEvent: {}
+[6.695092] (-) TimerEvent: {}
+[6.796033] (-) TimerEvent: {}
+[6.896851] (-) TimerEvent: {}
+[6.997618] (-) TimerEvent: {}
+[7.100004] (-) TimerEvent: {}
+[7.206052] (-) TimerEvent: {}
+[7.308679] (-) TimerEvent: {}
+[7.409089] (-) TimerEvent: {}
+[7.512045] (-) TimerEvent: {}
+[7.635872] (-) TimerEvent: {}
+[7.757041] (-) TimerEvent: {}
+[7.863242] (-) TimerEvent: {}
+[7.963927] (-) TimerEvent: {}
+[8.068850] (-) TimerEvent: {}
+[8.169389] (-) TimerEvent: {}
+[8.269938] (-) TimerEvent: {}
+[8.371507] (-) TimerEvent: {}
+[8.472091] (-) TimerEvent: {}
+[8.573558] (-) TimerEvent: {}
+[8.674102] (-) TimerEvent: {}
+[8.776333] (-) TimerEvent: {}
+[8.891534] (-) TimerEvent: {}
+[8.992677] (-) TimerEvent: {}
+[9.093035] (-) TimerEvent: {}
+[9.193965] (-) TimerEvent: {}
+[9.294858] (-) TimerEvent: {}
+[9.395663] (-) TimerEvent: {}
+[9.497038] (-) TimerEvent: {}
+[9.598483] (-) TimerEvent: {}
+[9.699166] (-) TimerEvent: {}
+[9.800839] (-) TimerEvent: {}
+[9.906226] (-) TimerEvent: {}
+[10.007111] (-) TimerEvent: {}
+[10.108246] (-) TimerEvent: {}
+[10.209367] (-) TimerEvent: {}
+[10.311678] (-) TimerEvent: {}
+[10.421170] (-) TimerEvent: {}
+[10.522691] (-) TimerEvent: {}
+[10.623456] (-) TimerEvent: {}
+[10.726561] (-) TimerEvent: {}
+[10.827106] (-) TimerEvent: {}
+[10.962555] (-) TimerEvent: {}
+[11.083197] (-) TimerEvent: {}
+[11.154324] (log_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/log_pkg', 'build', '--build-base', '/home/vboxuser/apf_ws/build/log_pkg/build', 'install', '--record', '/home/vboxuser/apf_ws/build/log_pkg/install.log', '--install-scripts', '$base/lib/log_pkg', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vboxuser/apf_ws/src/log_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vboxuser', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vboxuser', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2280', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/home/vboxuser/ros2_ws/src', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vboxuser/apf_ws/install:/home/vboxuser/myturtlebot_ws/install:/home/vboxuser/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vboxuser', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vboxuser', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/huzaifatahir:@/tmp/.ICE-unix/2243,unix/huzaifatahir:/tmp/.ICE-unix/2243', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/38cb7765_f0b4_42d9_aebc_1c49961c2313', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.HQYRT3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.149', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/vboxuser/apf_ws/install/odom_cmd:/home/vboxuser/apf_ws/install/log_pkg:/home/vboxuser/apf_ws/install/lidar_odom:/home/vboxuser/apf_ws/install/apf_pkg:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization:/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vboxuser/apf_ws/build/log_pkg', 'TURTLEBOT3_MODEL': 'burger', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vboxuser/apf_ws/build/log_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[11.184219] (-) TimerEvent: {}
+[11.249146] (apf_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/apf_pkg', 'build', '--build-base', '/home/vboxuser/apf_ws/build/apf_pkg/build', 'install', '--record', '/home/vboxuser/apf_ws/build/apf_pkg/install.log', '--install-scripts', '$base/lib/apf_pkg', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vboxuser/apf_ws/src/apf_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vboxuser', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vboxuser', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2280', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/home/vboxuser/ros2_ws/src', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vboxuser/apf_ws/install:/home/vboxuser/myturtlebot_ws/install:/home/vboxuser/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vboxuser', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vboxuser', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/huzaifatahir:@/tmp/.ICE-unix/2243,unix/huzaifatahir:/tmp/.ICE-unix/2243', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/38cb7765_f0b4_42d9_aebc_1c49961c2313', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.HQYRT3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.149', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/vboxuser/apf_ws/install/odom_cmd:/home/vboxuser/apf_ws/install/log_pkg:/home/vboxuser/apf_ws/install/lidar_odom:/home/vboxuser/apf_ws/install/apf_pkg:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization:/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vboxuser/apf_ws/build/apf_pkg', 'TURTLEBOT3_MODEL': 'burger', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[11.288121] (-) TimerEvent: {}
+[11.310378] (lidar_odom) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lidar_odom', 'build', '--build-base', '/home/vboxuser/apf_ws/build/lidar_odom/build', 'install', '--record', '/home/vboxuser/apf_ws/build/lidar_odom/install.log', '--install-scripts', '$base/lib/lidar_odom', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vboxuser/apf_ws/src/lidar_odom', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vboxuser', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vboxuser', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2280', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/home/vboxuser/ros2_ws/src', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vboxuser/apf_ws/install:/home/vboxuser/myturtlebot_ws/install:/home/vboxuser/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vboxuser', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vboxuser', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/huzaifatahir:@/tmp/.ICE-unix/2243,unix/huzaifatahir:/tmp/.ICE-unix/2243', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/38cb7765_f0b4_42d9_aebc_1c49961c2313', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.HQYRT3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.149', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/vboxuser/apf_ws/install/odom_cmd:/home/vboxuser/apf_ws/install/log_pkg:/home/vboxuser/apf_ws/install/lidar_odom:/home/vboxuser/apf_ws/install/apf_pkg:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization:/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vboxuser/apf_ws/build/lidar_odom', 'TURTLEBOT3_MODEL': 'burger', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vboxuser/apf_ws/build/lidar_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[11.361742] (odom_cmd) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/odom_cmd', 'build', '--build-base', '/home/vboxuser/apf_ws/build/odom_cmd/build', 'install', '--record', '/home/vboxuser/apf_ws/build/odom_cmd/install.log', '--install-scripts', '$base/lib/odom_cmd', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vboxuser/apf_ws/src/odom_cmd', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vboxuser', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vboxuser', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2280', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/home/vboxuser/ros2_ws/src', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vboxuser/apf_ws/install:/home/vboxuser/myturtlebot_ws/install:/home/vboxuser/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vboxuser', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vboxuser', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/huzaifatahir:@/tmp/.ICE-unix/2243,unix/huzaifatahir:/tmp/.ICE-unix/2243', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/38cb7765_f0b4_42d9_aebc_1c49961c2313', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.HQYRT3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.149', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/vboxuser/apf_ws/install/odom_cmd:/home/vboxuser/apf_ws/install/log_pkg:/home/vboxuser/apf_ws/install/lidar_odom:/home/vboxuser/apf_ws/install/apf_pkg:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization:/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vboxuser/apf_ws/build/odom_cmd', 'TURTLEBOT3_MODEL': 'burger', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:/home/vboxuser/myturtlebot_ws/install/turtlebot_localization/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_teleop:/home/vboxuser/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/build/turtlebot3_example:/home/vboxuser/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/vboxuser/turtlebot3_ws/install/turtlebot3:/home/vboxuser/turtlebot3_ws/install/turtlebot3_simulations:/home/vboxuser/turtlebot3_ws/install/turtlebot3_bringup:/home/vboxuser/turtlebot3_ws/install/turtlebot3_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_navigation2:/home/vboxuser/turtlebot3_ws/install/turtlebot3_fake_node:/home/vboxuser/turtlebot3_ws/install/turtlebot3_msgs:/home/vboxuser/turtlebot3_ws/install/turtlebot3_gazebo:/home/vboxuser/turtlebot3_ws/install/turtlebot3_description:/home/vboxuser/turtlebot3_ws/install/turtlebot3_cartographer:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_examples:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/vboxuser/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[11.390805] (-) TimerEvent: {}
+[11.493474] (-) TimerEvent: {}
+[11.594361] (-) TimerEvent: {}
+[11.695759] (-) TimerEvent: {}
+[11.799418] (-) TimerEvent: {}
+[11.902980] (-) TimerEvent: {}
+[12.007727] (-) TimerEvent: {}
+[12.109028] (-) TimerEvent: {}
+[12.210012] (-) TimerEvent: {}
+[12.310781] (-) TimerEvent: {}
+[12.417918] (-) TimerEvent: {}
+[12.518532] (-) TimerEvent: {}
+[12.620511] (-) TimerEvent: {}
+[12.730454] (-) TimerEvent: {}
+[12.831346] (-) TimerEvent: {}
+[12.931962] (-) TimerEvent: {}
+[13.032647] (-) TimerEvent: {}
+[13.076968] (log_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[13.093303] (lidar_odom) StdoutLine: {'line': b'running egg_info\n'}
+[13.117743] (apf_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[13.136083] (-) TimerEvent: {}
+[13.163719] (odom_cmd) StdoutLine: {'line': b'running egg_info\n'}
+[13.164443] (log_pkg) StdoutLine: {'line': b'writing ../../build/log_pkg/log_pkg.egg-info/PKG-INFO\n'}
+[13.164565] (log_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/log_pkg/log_pkg.egg-info/dependency_links.txt\n'}
+[13.164644] (log_pkg) StdoutLine: {'line': b'writing requirements to ../../build/log_pkg/log_pkg.egg-info/requires.txt\n'}
+[13.164711] (log_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/log_pkg/log_pkg.egg-info/top_level.txt\n'}
+[13.183816] (odom_cmd) StdoutLine: {'line': b'writing ../../build/odom_cmd/odom_cmd.egg-info/PKG-INFO\n'}
+[13.186964] (odom_cmd) StdoutLine: {'line': b'writing dependency_links to ../../build/odom_cmd/odom_cmd.egg-info/dependency_links.txt\n'}
+[13.187163] (odom_cmd) StdoutLine: {'line': b'writing entry points to ../../build/odom_cmd/odom_cmd.egg-info/entry_points.txt\n'}
+[13.188660] (odom_cmd) StdoutLine: {'line': b'writing requirements to ../../build/odom_cmd/odom_cmd.egg-info/requires.txt\n'}
+[13.190491] (odom_cmd) StdoutLine: {'line': b'writing top-level names to ../../build/odom_cmd/odom_cmd.egg-info/top_level.txt\n'}
+[13.197708] (apf_pkg) StdoutLine: {'line': b'writing ../../build/apf_pkg/apf_pkg.egg-info/PKG-INFO\n'}
+[13.200623] (apf_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/apf_pkg/apf_pkg.egg-info/dependency_links.txt\n'}
+[13.201761] (apf_pkg) StdoutLine: {'line': b'writing entry points to ../../build/apf_pkg/apf_pkg.egg-info/entry_points.txt\n'}
+[13.202593] (apf_pkg) StdoutLine: {'line': b'writing requirements to ../../build/apf_pkg/apf_pkg.egg-info/requires.txt\n'}
+[13.203869] (apf_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/apf_pkg/apf_pkg.egg-info/top_level.txt\n'}
+[13.236561] (-) TimerEvent: {}
+[13.270263] (log_pkg) StdoutLine: {'line': b"reading manifest file '../../build/log_pkg/log_pkg.egg-info/SOURCES.txt'\n"}
+[13.270503] (lidar_odom) StdoutLine: {'line': b'writing ../../build/lidar_odom/lidar_odom.egg-info/PKG-INFO\n'}
+[13.270676] (lidar_odom) StdoutLine: {'line': b'writing dependency_links to ../../build/lidar_odom/lidar_odom.egg-info/dependency_links.txt\n'}
+[13.270760] (lidar_odom) StdoutLine: {'line': b'writing entry points to ../../build/lidar_odom/lidar_odom.egg-info/entry_points.txt\n'}
+[13.270827] (lidar_odom) StdoutLine: {'line': b'writing requirements to ../../build/lidar_odom/lidar_odom.egg-info/requires.txt\n'}
+[13.275347] (lidar_odom) StdoutLine: {'line': b'writing top-level names to ../../build/lidar_odom/lidar_odom.egg-info/top_level.txt\n'}
+[13.280384] (log_pkg) StdoutLine: {'line': b"writing manifest file '../../build/log_pkg/log_pkg.egg-info/SOURCES.txt'\n"}
+[13.280639] (log_pkg) StdoutLine: {'line': b'running build\n'}
+[13.280802] (log_pkg) StdoutLine: {'line': b'running build_py\n'}
+[13.288496] (log_pkg) StdoutLine: {'line': b'running install\n'}
+[13.299610] (log_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[13.337585] (-) TimerEvent: {}
+[13.347611] (odom_cmd) StdoutLine: {'line': b"reading manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'\n"}
+[13.371431] (odom_cmd) StdoutLine: {'line': b"writing manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'\n"}
+[13.381864] (odom_cmd) StdoutLine: {'line': b'running build\n'}
+[13.382358] (odom_cmd) StdoutLine: {'line': b'running build_py\n'}
+[13.387357] (odom_cmd) StdoutLine: {'line': b'running install\n'}
+[13.390527] (log_pkg) StdoutLine: {'line': b'running install_data\n'}
+[13.407067] (log_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.407288] (odom_cmd) StdoutLine: {'line': b'running install_lib\n'}
+[13.439002] (-) TimerEvent: {}
+[13.440574] (odom_cmd) StdoutLine: {'line': b'running install_data\n'}
+[13.449956] (log_pkg) StdoutLine: {'line': b"removing '/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages/log_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[13.457352] (apf_pkg) StdoutLine: {'line': b"reading manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'\n"}
+[13.463414] (log_pkg) StdoutLine: {'line': b'Copying ../../build/log_pkg/log_pkg.egg-info to /home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages/log_pkg-0.0.0-py3.12.egg-info\n'}
+[13.465094] (apf_pkg) StdoutLine: {'line': b"writing manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'\n"}
+[13.465395] (odom_cmd) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.475250] (apf_pkg) StdoutLine: {'line': b'running build\n'}
+[13.475494] (apf_pkg) StdoutLine: {'line': b'running build_py\n'}
+[13.476788] (apf_pkg) StdoutLine: {'line': b'running install\n'}
+[13.497494] (log_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[13.497998] (apf_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[13.527330] (odom_cmd) StdoutLine: {'line': b"removing '/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[13.527915] (lidar_odom) StdoutLine: {'line': b"reading manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'\n"}
+[13.533890] (odom_cmd) StdoutLine: {'line': b'Copying ../../build/odom_cmd/odom_cmd.egg-info to /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd-0.0.0-py3.12.egg-info\n'}
+[13.539297] (odom_cmd) StdoutLine: {'line': b'running install_scripts\n'}
+[13.539495] (-) TimerEvent: {}
+[13.543355] (lidar_odom) StdoutLine: {'line': b"writing manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'\n"}
+[13.561595] (lidar_odom) StdoutLine: {'line': b'running build\n'}
+[13.562048] (lidar_odom) StdoutLine: {'line': b'running build_py\n'}
+[13.579021] (lidar_odom) StdoutLine: {'line': b'copying lidar_odom/icp_mapping.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom\n'}
+[13.588476] (lidar_odom) StdoutLine: {'line': b'running install\n'}
+[13.592799] (apf_pkg) StdoutLine: {'line': b'running install_data\n'}
+[13.609697] (apf_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.611959] (lidar_odom) StdoutLine: {'line': b'running install_lib\n'}
+[13.639756] (-) TimerEvent: {}
+[13.655103] (lidar_odom) StdoutLine: {'line': b'copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/icp_mapping.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom\n'}
+[13.655882] (lidar_odom) StdoutLine: {'line': b'byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_mapping.py to icp_mapping.cpython-312.pyc\n'}
+[13.663926] (lidar_odom) StdoutLine: {'line': b'running install_data\n'}
+[13.674136] (lidar_odom) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.745877] (-) TimerEvent: {}
+[13.769774] (lidar_odom) StdoutLine: {'line': b"removing '/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[13.772418] (lidar_odom) StdoutLine: {'line': b'Copying ../../build/lidar_odom/lidar_odom.egg-info to /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom-0.0.0-py3.12.egg-info\n'}
+[13.772658] (lidar_odom) StdoutLine: {'line': b'running install_scripts\n'}
+[13.773728] (apf_pkg) StdoutLine: {'line': b"removing '/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[13.773862] (apf_pkg) StdoutLine: {'line': b'Copying ../../build/apf_pkg/apf_pkg.egg-info to /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info\n'}
+[13.778240] (apf_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[13.848245] (-) TimerEvent: {}
+[13.951970] (-) TimerEvent: {}
+[14.057349] (-) TimerEvent: {}
+[14.168389] (-) TimerEvent: {}
+[14.272692] (-) TimerEvent: {}
+[14.376520] (-) TimerEvent: {}
+[14.477004] (-) TimerEvent: {}
+[14.578985] (-) TimerEvent: {}
+[14.698631] (-) TimerEvent: {}
+[14.802913] (-) TimerEvent: {}
+[14.907650] (-) TimerEvent: {}
+[15.029700] (-) TimerEvent: {}
+[15.139319] (-) TimerEvent: {}
+[15.239782] (-) TimerEvent: {}
+[15.346315] (-) TimerEvent: {}
+[15.447440] (-) TimerEvent: {}
+[15.548363] (-) TimerEvent: {}
+[15.657729] (-) TimerEvent: {}
+[15.762462] (-) TimerEvent: {}
+[15.864012] (-) TimerEvent: {}
+[15.965839] (-) TimerEvent: {}
+[16.066876] (-) TimerEvent: {}
+[16.183607] (-) TimerEvent: {}
+[16.297728] (-) TimerEvent: {}
+[16.409715] (-) TimerEvent: {}
+[16.510705] (-) TimerEvent: {}
+[16.620822] (-) TimerEvent: {}
+[16.722452] (-) TimerEvent: {}
+[16.826732] (-) TimerEvent: {}
+[16.929655] (-) TimerEvent: {}
+[17.038580] (-) TimerEvent: {}
+[17.142116] (-) TimerEvent: {}
+[17.243422] (-) TimerEvent: {}
+[17.344807] (-) TimerEvent: {}
+[17.446480] (-) TimerEvent: {}
+[17.495110] (apf_pkg) StdoutLine: {'line': b'Installing apf_controller script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg\n'}
+[17.580083] (-) TimerEvent: {}
+[17.580295] (odom_cmd) StdoutLine: {'line': b'Installing cmd_robot script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd\n'}
+[17.580848] (lidar_odom) StdoutLine: {'line': b'Installing cmd_robot script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[17.601037] (log_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/vboxuser/apf_ws/build/log_pkg/install.log'\n"}
+[17.605574] (apf_pkg) StdoutLine: {'line': b'Installing apf_node script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg\n'}
+[17.606181] (apf_pkg) StdoutLine: {'line': b'Installing logger script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg\n'}
+[17.606288] (lidar_odom) StdoutLine: {'line': b'Installing icp_localization_node script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[17.606410] (apf_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/vboxuser/apf_ws/build/apf_pkg/install.log'\n"}
+[17.606481] (odom_cmd) StdoutLine: {'line': b'Installing logger script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd\n'}
+[17.606559] (lidar_odom) StdoutLine: {'line': b'Installing icp_mapping script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[17.609324] (lidar_odom) StdoutLine: {'line': b'Installing logger script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom\n'}
+[17.619558] (lidar_odom) StdoutLine: {'line': b"writing list of installed files to '/home/vboxuser/apf_ws/build/lidar_odom/install.log'\n"}
+[17.622702] (odom_cmd) StdoutLine: {'line': b"writing list of installed files to '/home/vboxuser/apf_ws/build/odom_cmd/install.log'\n"}
+[17.686761] (-) TimerEvent: {}
+[17.794179] (-) TimerEvent: {}
+[17.895016] (-) TimerEvent: {}
+[17.936362] (apf_pkg) CommandEnded: {'returncode': 0}
+[17.999664] (-) TimerEvent: {}
+[18.100774] (-) TimerEvent: {}
+[18.201435] (-) TimerEvent: {}
+[18.263532] (apf_pkg) JobEnded: {'identifier': 'apf_pkg', 'rc': 0}
+[18.284028] (odom_cmd) CommandEnded: {'returncode': 0}
+[18.302553] (-) TimerEvent: {}
+[18.387372] (odom_cmd) JobEnded: {'identifier': 'odom_cmd', 'rc': 0}
+[18.396559] (lidar_odom) CommandEnded: {'returncode': 0}
+[18.405059] (-) TimerEvent: {}
+[18.438708] (lidar_odom) JobEnded: {'identifier': 'lidar_odom', 'rc': 0}
+[18.439546] (log_pkg) CommandEnded: {'returncode': 0}
+[18.505578] (-) TimerEvent: {}
+[18.583177] (log_pkg) JobEnded: {'identifier': 'log_pkg', 'rc': 0}
+[18.612230] (-) TimerEvent: {}
+[18.612414] (-) EventReactorShutdown: {}

@@ -1,0 +1,404 @@
+[1.045s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.045s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=5, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7272f46bebd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7272f47e33b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7272f47e33b0>>, mixin_verb=('build',))
+[1.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.301s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.301s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.301s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vboxuser/apf_ws'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.496s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.496s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.496s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.496s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.496s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['ignore', 'ignore_ament_install']
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ignore'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ignore_ament_install'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['colcon_pkg']
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'colcon_pkg'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['colcon_meta']
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'colcon_meta'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['ros']
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ros'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['cmake', 'python']
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'cmake'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'python'
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['python_setup_py']
+[1.499s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'python_setup_py'
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extensions ['ignore', 'ignore_ament_install']
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'ignore'
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'ignore_ament_install'
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extensions ['colcon_pkg']
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'colcon_pkg'
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extensions ['colcon_meta']
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'colcon_meta'
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extensions ['ros']
+[1.500s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'ros'
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extensions ['cmake', 'python']
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'cmake'
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'python'
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extensions ['python_setup_py']
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs) by extension 'python_setup_py'
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extensions ['ignore', 'ignore_ament_install']
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'ignore'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'ignore_ament_install'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extensions ['colcon_pkg']
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'colcon_pkg'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extensions ['colcon_meta']
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'colcon_meta'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extensions ['ros']
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'ros'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extensions ['cmake', 'python']
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'cmake'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'python'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extensions ['python_setup_py']
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/apf_pkg_logs) by extension 'python_setup_py'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extensions ['ignore', 'ignore_ament_install']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'ignore'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'ignore_ament_install'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extensions ['colcon_pkg']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'colcon_pkg'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extensions ['colcon_meta']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'colcon_meta'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extensions ['ros']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'ros'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extensions ['cmake', 'python']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'cmake'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'python'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extensions ['python_setup_py']
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/ekf_logs) by extension 'python_setup_py'
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extensions ['ignore', 'ignore_ament_install']
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'ignore'
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'ignore_ament_install'
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extensions ['colcon_pkg']
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'colcon_pkg'
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extensions ['colcon_meta']
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'colcon_meta'
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extensions ['ros']
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'ros'
+[1.504s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extensions ['cmake', 'python']
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'cmake'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'python'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extensions ['python_setup_py']
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(my_logs/lidar_odom_logs) by extension 'python_setup_py'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extensions ['ignore', 'ignore_ament_install']
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extension 'ignore'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extension 'ignore_ament_install'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extensions ['colcon_pkg']
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extension 'colcon_pkg'
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extensions ['colcon_meta']
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extension 'colcon_meta'
+[1.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extensions ['ros']
+[1.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/apf_pkg) by extension 'ros'
+[1.520s] DEBUG:colcon.colcon_core.package_identification:Package 'src/apf_pkg' with type 'ros.ament_python' and name 'apf_pkg'
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extensions ['ignore', 'ignore_ament_install']
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extension 'ignore'
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extension 'ignore_ament_install'
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extensions ['colcon_pkg']
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extension 'colcon_pkg'
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extensions ['colcon_meta']
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extension 'colcon_meta'
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extensions ['ros']
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src/ekf_pkg) by extension 'ros'
+[1.522s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ekf_pkg' with type 'ros.ament_python' and name 'ekf_pkg'
+[1.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extensions ['ignore', 'ignore_ament_install']
+[1.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extension 'ignore'
+[1.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extension 'ignore_ament_install'
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extensions ['colcon_pkg']
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extension 'colcon_pkg'
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extensions ['colcon_meta']
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extension 'colcon_meta'
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extensions ['ros']
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_odom) by extension 'ros'
+[1.525s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_odom' with type 'ros.ament_python' and name 'lidar_odom'
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extensions ['ignore', 'ignore_ament_install']
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extension 'ignore'
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extension 'ignore_ament_install'
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extensions ['colcon_pkg']
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extension 'colcon_pkg'
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extensions ['colcon_meta']
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extension 'colcon_meta'
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extensions ['ros']
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_cmd) by extension 'ros'
+[1.527s] DEBUG:colcon.colcon_core.package_identification:Package 'src/odom_cmd' with type 'ros.ament_python' and name 'odom_cmd'
+[1.527s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.527s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore'
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore_ament_install'
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_pkg']
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_pkg'
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_meta']
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_meta'
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ros']
+[1.528s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ros'
+[1.529s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_bringup' with type 'ros.ament_python' and name 'robot_bringup'
+[1.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.650s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.650s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.708s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/vboxuser/apf_ws/install
+[1.711s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/vboxuser/myturtlebot_ws/install
+[1.740s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 15 installed packages in /home/vboxuser/turtlebot3_ws/install
+[1.747s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 497 installed packages in /opt/ros/jazzy
+[1.756s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'cmake_args' from command line to 'None'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'cmake_target' from command line to 'None'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'apf_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.541s] DEBUG:colcon.colcon_core.verb:Building package 'apf_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vboxuser/apf_ws/build/apf_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vboxuser/apf_ws/install/apf_pkg', 'merge_install': False, 'path': '/home/vboxuser/apf_ws/src/apf_pkg', 'symlink_install': False, 'test_result_base': None}
+[2.541s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'cmake_target' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'ekf_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.542s] DEBUG:colcon.colcon_core.verb:Building package 'ekf_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vboxuser/apf_ws/build/ekf_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vboxuser/apf_ws/install/ekf_pkg', 'merge_install': False, 'path': '/home/vboxuser/apf_ws/src/ekf_pkg', 'symlink_install': False, 'test_result_base': None}
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'cmake_target' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'cmake_clean_cache' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'cmake_clean_first' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'cmake_force_configure' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'ament_cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'catkin_cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'lidar_odom' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.542s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_odom' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vboxuser/apf_ws/build/lidar_odom', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vboxuser/apf_ws/install/lidar_odom', 'merge_install': False, 'path': '/home/vboxuser/apf_ws/src/lidar_odom', 'symlink_install': False, 'test_result_base': None}
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'cmake_target' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'cmake_clean_cache' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'cmake_clean_first' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'cmake_force_configure' from command line to 'False'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'ament_cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'catkin_cmake_args' from command line to 'None'
+[2.542s] Level 5:colcon.colcon_core.verb:set package 'odom_cmd' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.542s] DEBUG:colcon.colcon_core.verb:Building package 'odom_cmd' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vboxuser/apf_ws/build/odom_cmd', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vboxuser/apf_ws/install/odom_cmd', 'merge_install': False, 'path': '/home/vboxuser/apf_ws/src/odom_cmd', 'symlink_install': False, 'test_result_base': None}
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_args' from command line to 'None'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target' from command line to 'None'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[2.543s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.543s] DEBUG:colcon.colcon_core.verb:Building package 'robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vboxuser/apf_ws/build/robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vboxuser/apf_ws/install/robot_bringup', 'merge_install': False, 'path': '/home/vboxuser/apf_ws/src/robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[2.543s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.544s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.545s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vboxuser/apf_ws/src/apf_pkg' with build type 'ament_python'
+[2.545s] Level 1:colcon.colcon_core.shell:create_environment_hook('apf_pkg', 'ament_prefix_path')
+[2.559s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/hook/ament_prefix_path.ps1'
+[2.562s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/hook/ament_prefix_path.dsv'
+[2.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/hook/ament_prefix_path.sh'
+[2.568s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.576s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vboxuser/apf_ws/src/ekf_pkg' with build type 'ament_python'
+[2.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('ekf_pkg', 'ament_prefix_path')
+[2.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/hook/ament_prefix_path.ps1'
+[2.578s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/hook/ament_prefix_path.dsv'
+[2.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/hook/ament_prefix_path.sh'
+[2.579s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.579s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.586s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vboxuser/apf_ws/src/lidar_odom' with build type 'ament_python'
+[2.586s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_odom', 'ament_prefix_path')
+[2.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/hook/ament_prefix_path.ps1'
+[2.588s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/hook/ament_prefix_path.dsv'
+[2.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/hook/ament_prefix_path.sh'
+[2.589s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.589s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.598s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vboxuser/apf_ws/src/odom_cmd' with build type 'ament_python'
+[2.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('odom_cmd', 'ament_prefix_path')
+[2.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/hook/ament_prefix_path.ps1'
+[2.601s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/hook/ament_prefix_path.dsv'
+[2.602s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/hook/ament_prefix_path.sh'
+[2.602s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.602s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.612s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vboxuser/apf_ws/src/robot_bringup' with build type 'ament_python'
+[2.612s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'ament_prefix_path')
+[2.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/hook/ament_prefix_path.ps1'
+[2.614s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/hook/ament_prefix_path.dsv'
+[2.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/hook/ament_prefix_path.sh'
+[2.616s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.616s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.340s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vboxuser/apf_ws/src/apf_pkg'
+[3.341s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.341s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.720s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vboxuser/apf_ws/src/ekf_pkg'
+[3.720s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.721s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.156s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vboxuser/apf_ws/src/lidar_odom'
+[4.156s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.156s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.443s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vboxuser/apf_ws/src/odom_cmd'
+[4.443s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.443s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.922s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vboxuser/apf_ws/src/robot_bringup'
+[4.922s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.922s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.195s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, easy_install, bdist_egg, check, build_clib, clean, build, sdist, setopt, install_data, install_scripts, install_headers, install, build_py, egg_info, alias, symlink_data, bdist, init_catalog, editable_wheel, register, install_lib, bdist_rpm, saveopts, compile_catalog, test, bdist_dumb, extract_messages, upload_docs, develop, upload, install_egg_info, rotate, build_scripts, update_catalog, build_ext
+[7.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vboxuser/apf_ws/src/robot_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bringup build --build-base /home/vboxuser/apf_ws/build/robot_bringup/build install --record /home/vboxuser/apf_ws/build/robot_bringup/install.log --install-scripts $base/lib/robot_bringup --single-version-externally-managed install_data
+[7.243s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, easy_install, bdist_egg, check, build_clib, clean, build, sdist, setopt, install_data, install_scripts, install_headers, install, build_py, egg_info, alias, symlink_data, bdist, init_catalog, editable_wheel, register, install_lib, bdist_rpm, saveopts, compile_catalog, test, bdist_dumb, extract_messages, upload_docs, develop, upload, install_egg_info, rotate, build_scripts, update_catalog, build_ext
+[7.249s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, easy_install, bdist_egg, check, build_clib, clean, build, sdist, setopt, install_data, install_scripts, install_headers, install, build_py, egg_info, alias, symlink_data, bdist, init_catalog, editable_wheel, register, install_lib, bdist_rpm, saveopts, compile_catalog, test, bdist_dumb, extract_messages, upload_docs, develop, upload, install_egg_info, rotate, build_scripts, update_catalog, build_ext
+[7.249s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vboxuser/apf_ws/src/odom_cmd': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_cmd build --build-base /home/vboxuser/apf_ws/build/odom_cmd/build install --record /home/vboxuser/apf_ws/build/odom_cmd/install.log --install-scripts $base/lib/odom_cmd --single-version-externally-managed install_data
+[7.252s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, easy_install, bdist_egg, check, build_clib, clean, build, sdist, setopt, install_data, install_scripts, install_headers, install, build_py, egg_info, alias, symlink_data, bdist, init_catalog, editable_wheel, register, install_lib, bdist_rpm, saveopts, compile_catalog, test, bdist_dumb, extract_messages, upload_docs, develop, upload, install_egg_info, rotate, build_scripts, update_catalog, build_ext
+[7.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vboxuser/apf_ws/src/ekf_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/ekf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ekf_pkg build --build-base /home/vboxuser/apf_ws/build/ekf_pkg/build install --record /home/vboxuser/apf_ws/build/ekf_pkg/install.log --install-scripts $base/lib/ekf_pkg --single-version-externally-managed install_data
+[7.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vboxuser/apf_ws/src/lidar_odom': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/lidar_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_odom build --build-base /home/vboxuser/apf_ws/build/lidar_odom/build install --record /home/vboxuser/apf_ws/build/lidar_odom/install.log --install-scripts $base/lib/lidar_odom --single-version-externally-managed install_data
+[7.261s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, easy_install, bdist_egg, check, build_clib, clean, build, sdist, setopt, install_data, install_scripts, install_headers, install, build_py, egg_info, alias, symlink_data, bdist, init_catalog, editable_wheel, register, install_lib, bdist_rpm, saveopts, compile_catalog, test, bdist_dumb, extract_messages, upload_docs, develop, upload, install_egg_info, rotate, build_scripts, update_catalog, build_ext
+[7.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vboxuser/apf_ws/src/apf_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/apf_pkg build --build-base /home/vboxuser/apf_ws/build/apf_pkg/build install --record /home/vboxuser/apf_ws/build/apf_pkg/install.log --install-scripts $base/lib/apf_pkg --single-version-externally-managed install_data
+[8.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vboxuser/apf_ws/src/robot_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bringup build --build-base /home/vboxuser/apf_ws/build/robot_bringup/build install --record /home/vboxuser/apf_ws/build/robot_bringup/install.log --install-scripts $base/lib/robot_bringup --single-version-externally-managed install_data
+[8.101s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup' for CMake module files
+[8.106s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup' for CMake config files
+[8.113s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup/lib'
+[8.113s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup/bin'
+[8.113s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup/lib/pkgconfig/robot_bringup.pc'
+[8.114s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages'
+[8.114s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'pythonpath')
+[8.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/hook/pythonpath.ps1'
+[8.117s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/hook/pythonpath.dsv'
+[8.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/hook/pythonpath.sh'
+[8.126s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/robot_bringup/bin'
+[8.127s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bringup)
+[8.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/package.ps1'
+[8.131s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/package.dsv'
+[8.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/package.sh'
+[8.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/package.bash'
+[8.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/robot_bringup/share/robot_bringup/package.zsh'
+[8.142s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vboxuser/apf_ws/install/robot_bringup/share/colcon-core/packages/robot_bringup)
+[8.184s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom' for CMake module files
+[8.185s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vboxuser/apf_ws/src/lidar_odom' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/lidar_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_odom build --build-base /home/vboxuser/apf_ws/build/lidar_odom/build install --record /home/vboxuser/apf_ws/build/lidar_odom/install.log --install-scripts $base/lib/lidar_odom --single-version-externally-managed install_data
+[8.188s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom' for CMake config files
+[8.194s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom/lib'
+[8.194s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom/bin'
+[8.194s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom/lib/pkgconfig/lidar_odom.pc'
+[8.195s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages'
+[8.195s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_odom', 'pythonpath')
+[8.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/hook/pythonpath.ps1'
+[8.196s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/hook/pythonpath.dsv'
+[8.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/hook/pythonpath.sh'
+[8.197s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/lidar_odom/bin'
+[8.197s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_odom)
+[8.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/package.ps1'
+[8.198s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/package.dsv'
+[8.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/package.sh'
+[8.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/package.bash'
+[8.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/package.zsh'
+[8.200s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vboxuser/apf_ws/install/lidar_odom/share/colcon-core/packages/lidar_odom)
+[8.202s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg' for CMake module files
+[8.205s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vboxuser/apf_ws/src/ekf_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/ekf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ekf_pkg build --build-base /home/vboxuser/apf_ws/build/ekf_pkg/build install --record /home/vboxuser/apf_ws/build/ekf_pkg/install.log --install-scripts $base/lib/ekf_pkg --single-version-externally-managed install_data
+[8.206s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg' for CMake config files
+[8.213s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg/lib'
+[8.213s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg/bin'
+[8.213s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg/lib/pkgconfig/ekf_pkg.pc'
+[8.213s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages'
+[8.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('ekf_pkg', 'pythonpath')
+[8.214s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/hook/pythonpath.ps1'
+[8.215s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/hook/pythonpath.dsv'
+[8.215s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/hook/pythonpath.sh'
+[8.216s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/ekf_pkg/bin'
+[8.216s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ekf_pkg)
+[8.217s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/package.ps1'
+[8.218s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/package.dsv'
+[8.218s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/package.sh'
+[8.219s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/package.bash'
+[8.220s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/ekf_pkg/share/ekf_pkg/package.zsh'
+[8.221s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vboxuser/apf_ws/install/ekf_pkg/share/colcon-core/packages/ekf_pkg)
+[8.223s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd' for CMake module files
+[8.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vboxuser/apf_ws/src/odom_cmd' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_cmd build --build-base /home/vboxuser/apf_ws/build/odom_cmd/build install --record /home/vboxuser/apf_ws/build/odom_cmd/install.log --install-scripts $base/lib/odom_cmd --single-version-externally-managed install_data
+[8.224s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd' for CMake config files
+[8.230s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd/lib'
+[8.230s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd/bin'
+[8.230s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd/lib/pkgconfig/odom_cmd.pc'
+[8.230s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages'
+[8.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('odom_cmd', 'pythonpath')
+[8.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/hook/pythonpath.ps1'
+[8.234s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/hook/pythonpath.dsv'
+[8.234s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/hook/pythonpath.sh'
+[8.236s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/odom_cmd/bin'
+[8.236s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odom_cmd)
+[8.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/package.ps1'
+[8.239s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/package.dsv'
+[8.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/package.sh'
+[8.242s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/package.bash'
+[8.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/package.zsh'
+[8.244s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vboxuser/apf_ws/install/odom_cmd/share/colcon-core/packages/odom_cmd)
+[8.456s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg' for CMake module files
+[8.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vboxuser/apf_ws/src/apf_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/apf_pkg build --build-base /home/vboxuser/apf_ws/build/apf_pkg/build install --record /home/vboxuser/apf_ws/build/apf_pkg/install.log --install-scripts $base/lib/apf_pkg --single-version-externally-managed install_data
+[8.458s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg' for CMake config files
+[8.461s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg/lib'
+[8.461s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg/bin'
+[8.461s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg/lib/pkgconfig/apf_pkg.pc'
+[8.461s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages'
+[8.461s] Level 1:colcon.colcon_core.shell:create_environment_hook('apf_pkg', 'pythonpath')
+[8.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/hook/pythonpath.ps1'
+[8.462s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/hook/pythonpath.dsv'
+[8.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/hook/pythonpath.sh'
+[8.464s] Level 1:colcon.colcon_core.environment:checking '/home/vboxuser/apf_ws/install/apf_pkg/bin'
+[8.464s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(apf_pkg)
+[8.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/package.ps1'
+[8.466s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/package.dsv'
+[8.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/package.sh'
+[8.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/package.bash'
+[8.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/package.zsh'
+[8.469s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vboxuser/apf_ws/install/apf_pkg/share/colcon-core/packages/apf_pkg)
+[8.470s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.470s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.471s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.471s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.517s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.517s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.517s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.590s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.591s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vboxuser/apf_ws/install/local_setup.ps1'
+[8.593s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vboxuser/apf_ws/install/_local_setup_util_ps1.py'
+[8.595s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vboxuser/apf_ws/install/setup.ps1'
+[8.598s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vboxuser/apf_ws/install/local_setup.sh'
+[8.599s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vboxuser/apf_ws/install/_local_setup_util_sh.py'
+[8.600s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vboxuser/apf_ws/install/setup.sh'
+[8.603s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vboxuser/apf_ws/install/local_setup.bash'
+[8.605s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vboxuser/apf_ws/install/setup.bash'
+[8.609s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vboxuser/apf_ws/install/local_setup.zsh'
+[8.611s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vboxuser/apf_ws/install/setup.zsh'

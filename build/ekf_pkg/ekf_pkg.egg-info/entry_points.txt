@@ -1,0 +1,5 @@
+[console_scripts]
+ekf_node = ekf_pkg.ekf_node:main
+ekf_with_mapping = ekf_pkg.ekf_with_mapping:main
+logger = ekf_pkg.logger:main
+logger_map = ekf_pkg.logger_map:main

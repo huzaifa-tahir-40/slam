@@ -1,0 +1,4 @@
+[console_scripts]
+apf_controller = apf_pkg.apf_controller:main
+apf_node = apf_pkg.apf_node:main
+logger = apf_pkg.logger:main

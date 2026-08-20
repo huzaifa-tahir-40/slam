@@ -1,0 +1,45 @@
+running egg_info
+creating ../../build/lidar_odom/lidar_odom.egg-info
+writing ../../build/lidar_odom/lidar_odom.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar_odom/lidar_odom.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar_odom/lidar_odom.egg-info/entry_points.txt
+writing requirements to ../../build/lidar_odom/lidar_odom.egg-info/requires.txt
+writing top-level names to ../../build/lidar_odom/lidar_odom.egg-info/top_level.txt
+writing manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'
+reading manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'
+writing manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vboxuser/apf_ws/build/lidar_odom/build
+creating /home/vboxuser/apf_ws/build/lidar_odom/build/lib
+creating /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom
+copying lidar_odom/__init__.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom
+copying lidar_odom/icp_localization_node.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom
+copying lidar_odom/logger.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom
+copying lidar_odom/cmd_robot.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom
+running install
+running install_lib
+creating /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom
+copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/__init__.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom
+copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/icp_localization_node.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom
+copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/logger.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom
+copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/cmd_robot.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom
+byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_localization_node.py to icp_localization_node.cpython-312.pyc
+byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/logger.py to logger.cpython-312.pyc
+byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/cmd_robot.py to cmd_robot.cpython-312.pyc
+running install_data
+creating /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index
+creating /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index/resource_index
+creating /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index/resource_index/packages
+copying resource/lidar_odom -> /home/vboxuser/apf_ws/install/lidar_odom/share/ament_index/resource_index/packages
+copying package.xml -> /home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom
+creating /home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/launch
+copying launch/icp_log.launch.py -> /home/vboxuser/apf_ws/install/lidar_odom/share/lidar_odom/launch
+running install_egg_info
+Copying ../../build/lidar_odom/lidar_odom.egg-info to /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom-0.0.0-py3.12.egg-info
+running install_scripts
+Installing cmd_robot script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+Installing icp_localization_node script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+Installing logger script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+writing list of installed files to '/home/vboxuser/apf_ws/build/lidar_odom/install.log'

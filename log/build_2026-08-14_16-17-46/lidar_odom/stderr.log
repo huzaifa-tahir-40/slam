@@ -1,0 +1,5 @@
+  File "/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_mapping.py", line 137
+    ]
+    ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '(' on line 136
+

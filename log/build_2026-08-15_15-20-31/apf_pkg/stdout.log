@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/apf_pkg/apf_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/apf_pkg/apf_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/apf_pkg/apf_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/apf_pkg/apf_pkg.egg-info/requires.txt
+writing top-level names to ../../build/apf_pkg/apf_pkg.egg-info/top_level.txt
+reading manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying config/apf.yaml -> /home/vboxuser/apf_ws/install/apf_pkg/share/apf_pkg/config
+running install_egg_info
+removing '/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/apf_pkg/apf_pkg.egg-info to /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info
+running install_scripts
+Installing apf_controller script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+Installing apf_node script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+Installing logger script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+writing list of installed files to '/home/vboxuser/apf_ws/build/apf_pkg/install.log'

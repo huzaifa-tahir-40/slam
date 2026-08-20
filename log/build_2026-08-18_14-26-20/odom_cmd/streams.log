@@ -1,0 +1,23 @@
+[8.141s] Invoking command in '/home/vboxuser/apf_ws/src/odom_cmd': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_cmd build --build-base /home/vboxuser/apf_ws/build/odom_cmd/build install --record /home/vboxuser/apf_ws/build/odom_cmd/install.log --install-scripts $base/lib/odom_cmd --single-version-externally-managed install_data
+[8.644s] running egg_info
+[8.707s] writing ../../build/odom_cmd/odom_cmd.egg-info/PKG-INFO
+[8.708s] writing dependency_links to ../../build/odom_cmd/odom_cmd.egg-info/dependency_links.txt
+[8.708s] writing entry points to ../../build/odom_cmd/odom_cmd.egg-info/entry_points.txt
+[8.709s] writing requirements to ../../build/odom_cmd/odom_cmd.egg-info/requires.txt
+[8.710s] writing top-level names to ../../build/odom_cmd/odom_cmd.egg-info/top_level.txt
+[8.806s] reading manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+[8.820s] writing manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+[8.821s] running build
+[8.821s] running build_py
+[8.821s] running install
+[8.839s] running install_lib
+[8.882s] running install_data
+[8.882s] running install_egg_info
+[8.919s] removing '/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd-0.0.0-py3.12.egg-info' (and everything under it)
+[8.920s] Copying ../../build/odom_cmd/odom_cmd.egg-info to /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd-0.0.0-py3.12.egg-info
+[8.923s] running install_scripts
+[9.210s] Installing cmd_robot script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+[9.216s] Installing cmd_robot_path script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+[9.216s] Installing logger script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+[9.216s] writing list of installed files to '/home/vboxuser/apf_ws/build/odom_cmd/install.log'
+[9.343s] Invoked command in '/home/vboxuser/apf_ws/src/odom_cmd' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_cmd build --build-base /home/vboxuser/apf_ws/build/odom_cmd/build install --record /home/vboxuser/apf_ws/build/odom_cmd/install.log --install-scripts $base/lib/odom_cmd --single-version-externally-managed install_data

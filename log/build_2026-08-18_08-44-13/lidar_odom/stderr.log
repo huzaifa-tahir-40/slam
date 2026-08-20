@@ -1,0 +1,5 @@
+  File "/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/filter_lidar.py", line 61
+    self.previous_filtered = np.full(len(ranges)
+                                    ^
+SyntaxError: '(' was never closed
+

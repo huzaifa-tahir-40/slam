@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/ekf_pkg/ekf_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/ekf_pkg/ekf_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/ekf_pkg/ekf_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/ekf_pkg/ekf_pkg.egg-info/requires.txt
+writing top-level names to ../../build/ekf_pkg/ekf_pkg.egg-info/top_level.txt
+reading manifest file '../../build/ekf_pkg/ekf_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/ekf_pkg/ekf_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ekf_pkg/ekf_node.py -> /home/vboxuser/apf_ws/build/ekf_pkg/build/lib/ekf_pkg
+running install
+running install_lib
+copying /home/vboxuser/apf_ws/build/ekf_pkg/build/lib/ekf_pkg/ekf_node.py -> /home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg
+byte-compiling /home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg/ekf_node.py to ekf_node.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/ekf_pkg/ekf_pkg.egg-info to /home/vboxuser/apf_ws/install/ekf_pkg/lib/python3.12/site-packages/ekf_pkg-0.0.0-py3.12.egg-info
+running install_scripts
+Installing ekf_node script to /home/vboxuser/apf_ws/install/ekf_pkg/lib/ekf_pkg
+Installing logger script to /home/vboxuser/apf_ws/install/ekf_pkg/lib/ekf_pkg
+writing list of installed files to '/home/vboxuser/apf_ws/build/ekf_pkg/install.log'

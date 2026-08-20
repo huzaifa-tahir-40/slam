@@ -1,0 +1,4 @@
+[console_scripts]
+cmd_robot = odom_cmd.cmd_robot:main
+cmd_robot_path = odom_cmd.cmd_robot_path:main
+logger = odom_cmd.logger:main

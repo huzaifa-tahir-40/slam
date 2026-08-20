@@ -1,0 +1,45 @@
+running egg_info
+creating ../../build/odom_cmd/odom_cmd.egg-info
+writing ../../build/odom_cmd/odom_cmd.egg-info/PKG-INFO
+writing dependency_links to ../../build/odom_cmd/odom_cmd.egg-info/dependency_links.txt
+writing entry points to ../../build/odom_cmd/odom_cmd.egg-info/entry_points.txt
+writing requirements to ../../build/odom_cmd/odom_cmd.egg-info/requires.txt
+writing top-level names to ../../build/odom_cmd/odom_cmd.egg-info/top_level.txt
+writing manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+reading manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+writing manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vboxuser/apf_ws/build/odom_cmd/build
+creating /home/vboxuser/apf_ws/build/odom_cmd/build/lib
+creating /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+copying odom_cmd/__init__.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+copying odom_cmd/logger.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+copying odom_cmd/cmd_robot_path.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+copying odom_cmd/cmd_robot.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+running install
+running install_lib
+creating /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/__init__.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/logger.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/cmd_robot_path.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/cmd_robot.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/logger.py to logger.cpython-312.pyc
+byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/cmd_robot_path.py to cmd_robot_path.cpython-312.pyc
+byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/cmd_robot.py to cmd_robot.cpython-312.pyc
+running install_data
+creating /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index
+creating /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index/resource_index
+creating /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index/resource_index/packages
+copying resource/odom_cmd -> /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index/resource_index/packages
+copying package.xml -> /home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd
+creating /home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/launch
+copying launch/odom_log.launch.py -> /home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/launch
+running install_egg_info
+Copying ../../build/odom_cmd/odom_cmd.egg-info to /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd-0.0.0-py3.12.egg-info
+running install_scripts
+Installing cmd_robot script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+Installing cmd_robot_path script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+Installing logger script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+writing list of installed files to '/home/vboxuser/apf_ws/build/odom_cmd/install.log'

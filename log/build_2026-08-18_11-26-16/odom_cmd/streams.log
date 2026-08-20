@@ -1,0 +1,47 @@
+[3.741s] Invoking command in '/home/vboxuser/apf_ws/src/odom_cmd': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_cmd build --build-base /home/vboxuser/apf_ws/build/odom_cmd/build install --record /home/vboxuser/apf_ws/build/odom_cmd/install.log --install-scripts $base/lib/odom_cmd --single-version-externally-managed install_data
+[4.243s] running egg_info
+[4.244s] creating ../../build/odom_cmd/odom_cmd.egg-info
+[4.287s] writing ../../build/odom_cmd/odom_cmd.egg-info/PKG-INFO
+[4.288s] writing dependency_links to ../../build/odom_cmd/odom_cmd.egg-info/dependency_links.txt
+[4.288s] writing entry points to ../../build/odom_cmd/odom_cmd.egg-info/entry_points.txt
+[4.289s] writing requirements to ../../build/odom_cmd/odom_cmd.egg-info/requires.txt
+[4.289s] writing top-level names to ../../build/odom_cmd/odom_cmd.egg-info/top_level.txt
+[4.289s] writing manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+[4.499s] reading manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+[4.499s] writing manifest file '../../build/odom_cmd/odom_cmd.egg-info/SOURCES.txt'
+[4.499s] running build
+[4.499s] running build_py
+[4.499s] creating /home/vboxuser/apf_ws/build/odom_cmd/build
+[4.499s] creating /home/vboxuser/apf_ws/build/odom_cmd/build/lib
+[4.499s] creating /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+[4.500s] copying odom_cmd/__init__.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+[4.500s] copying odom_cmd/logger.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+[4.500s] copying odom_cmd/cmd_robot_path.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+[4.500s] copying odom_cmd/cmd_robot.py -> /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd
+[4.500s] running install
+[4.505s] running install_lib
+[4.595s] creating /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+[4.595s] copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/__init__.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+[4.595s] copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/logger.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+[4.595s] copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/cmd_robot_path.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+[4.595s] copying /home/vboxuser/apf_ws/build/odom_cmd/build/lib/odom_cmd/cmd_robot.py -> /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd
+[4.595s] byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/__init__.py to __init__.cpython-312.pyc
+[4.595s] byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/logger.py to logger.cpython-312.pyc
+[4.595s] byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/cmd_robot_path.py to cmd_robot_path.cpython-312.pyc
+[4.595s] byte-compiling /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd/cmd_robot.py to cmd_robot.cpython-312.pyc
+[4.595s] running install_data
+[4.595s] creating /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index
+[4.596s] creating /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index/resource_index
+[4.596s] creating /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index/resource_index/packages
+[4.600s] copying resource/odom_cmd -> /home/vboxuser/apf_ws/install/odom_cmd/share/ament_index/resource_index/packages
+[4.600s] copying package.xml -> /home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd
+[4.600s] creating /home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/launch
+[4.617s] copying launch/odom_log.launch.py -> /home/vboxuser/apf_ws/install/odom_cmd/share/odom_cmd/launch
+[4.617s] running install_egg_info
+[4.679s] Copying ../../build/odom_cmd/odom_cmd.egg-info to /home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages/odom_cmd-0.0.0-py3.12.egg-info
+[4.679s] running install_scripts
+[5.112s] Installing cmd_robot script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+[5.147s] Installing cmd_robot_path script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+[5.147s] Installing logger script to /home/vboxuser/apf_ws/install/odom_cmd/lib/odom_cmd
+[5.147s] writing list of installed files to '/home/vboxuser/apf_ws/build/odom_cmd/install.log'
+[5.212s] Invoked command in '/home/vboxuser/apf_ws/src/odom_cmd' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/odom_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/odom_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_cmd build --build-base /home/vboxuser/apf_ws/build/odom_cmd/build install --record /home/vboxuser/apf_ws/build/odom_cmd/install.log --install-scripts $base/lib/odom_cmd --single-version-externally-managed install_data

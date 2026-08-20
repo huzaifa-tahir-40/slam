@@ -1,0 +1,5 @@
+  File "/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_localization_node.py", line 302
+    pts = point_cloud2.read_points_numpy(msg, field_names=("x","y",skip_nans=True)
+                                                                   ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+

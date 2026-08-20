@@ -1,0 +1,466 @@
+import numpy as np
+from scipy.spatial import cKDTree
+import math
+
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import qos_profile_sensor_data
+
+from sensor_msgs.msg import LaserScan
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseWithCovarianceStamped, TransformStamped
+import tf2_ros
+from tf_transformations import quaternion_from_euler, euler_from_quaternion
+from geometry_msgs.msg import TransformStamped
+from sensor_msgs.msg import PointCloud2
+
+# --------------------------------------------------------------------------
+# Geometry helpers
+# --------------------------------------------------------------------------
+
+def rot2d(theta: float) -> np.ndarray:
+    c, s = np.cos(theta), np.sin(theta)
+    return np.array([[c, -s], [s, c]])
+
+def wrap_angle(angle: float) -> float:
+    return (angle + np.pi) % (2.0 * np.pi) - np.pi
+
+def se2_inverse(x, y, theta):
+    R = rot2d(theta).T
+    t = -R @ np.array([x, y])
+    return t[0], t[1], -theta
+
+
+def se2_compose(x1, y1, th1, x2, y2, th2):
+    """T1 * T2 (apply T2 first, then T1)."""
+    R1 = rot2d(th1)
+    t = R1 @ np.array([x2, y2]) + np.array([x1, y1])
+    return t[0], t[1], wrap_angle(th1 + th2)
+
+
+def laserscan_to_points(scan: LaserScan, downsample_step: int = 1) -> np.ndarray:
+    ranges = np.asarray(scan.ranges, dtype=np.float64)
+    angles = scan.angle_min + np.arange(len(ranges)) * scan.angle_increment
+
+    valid = np.isfinite(ranges) & (ranges > scan.range_min) & (ranges < scan.range_max)
+    ranges = ranges[valid]
+    angles = angles[valid]
+
+    if downsample_step > 1:
+        ranges = ranges[::downsample_step]
+        angles = angles[::downsample_step]
+
+    xs = ranges * np.cos(angles)
+    ys = ranges * np.sin(angles)
+    return np.stack([xs, ys], axis=1)
+
+
+def huber_weights(residuals: np.ndarray, delta: float) -> np.ndarray:
+    w = np.ones_like(residuals)
+    outlier = residuals > delta
+    w[outlier] = delta / residuals[outlier]
+    return w
+
+
+# --------------------------------------------------------------------------
+# Core 2D point-to-point ICP with Gauss-Newton covariance approximation
+# --------------------------------------------------------------------------
+
+def icp_2d(src: np.ndarray, dst: np.ndarray, init_xytheta=(0.0, 0.0, 0.0),
+           max_iterations=40, tolerance=1e-6, max_corr_dist=0.5,
+           robust_delta=0.15, min_inliers=15):
+    """
+    Align `src` onto `dst` in the least-squares sense using point-to-point
+    ICP with SVD-based rigid alignment per iteration and Huber weighting
+    for outlier rejection.
+
+    Returns
+    -------
+    x, y, theta : estimated SE(2) transform mapping src -> dst frame
+    cov         : 3x3 approximate covariance of (x, y, theta)
+    fitness     : inlier fraction at convergence
+    n_inliers   : inlier count at convergence
+    converged   : bool
+    """
+    R = rot2d(init_xytheta[2])
+    t = np.array([init_xytheta[0], init_xytheta[1]])
+
+    if len(src) < min_inliers or len(dst) < min_inliers:
+        return init_xytheta[0], init_xytheta[1], init_xytheta[2], np.eye(3) * 1e3, 0.0, 0, False
+
+    tree = cKDTree(dst)
+    prev_rmse = np.inf
+    converged = False
+    n_inliers = 0
+    rmse = np.inf
+
+    for _ in range(max_iterations):
+        transformed = src @ R.T + t
+        dists, idx = tree.query(transformed, k=1)
+        mask = dists < max_corr_dist
+        n_inliers = int(mask.sum())
+        if n_inliers < min_inliers:
+            break
+
+        p = transformed[mask]
+        q = dst[idx[mask]]
+        d = dists[mask]
+        w = huber_weights(d, robust_delta)
+
+        W = w.sum()
+        p_mean = (p * w[:, None]).sum(axis=0) / W
+        q_mean = (q * w[:, None]).sum(axis=0) / W
+        P = p - p_mean
+        Q = q - q_mean
+
+        S = (P * w[:, None]).T @ Q
+        U, _, Vt = np.linalg.svd(S)
+        dR = Vt.T @ U.T
+        if np.linalg.det(dR) < 0:
+            Vt[-1, :] *= -1
+            dR = Vt.T @ U.T
+        dt = q_mean - dR @ p_mean
+
+        # compose incremental transform into the running estimate
+        R = dR @ R
+        t = dR @ t + dt
+
+        rmse = float(np.sqrt(np.mean(np.sum((p - q) ** 2, axis=1))))
+        if abs(prev_rmse - rmse) < tolerance:
+            converged = True
+            break
+        prev_rmse = rmse
+
+    theta = float(np.arctan2(R[1, 0], R[0, 0]))
+    x, y = float(t[0]), float(t[1])
+
+    # --- Gauss-Newton information matrix at the converged solution ---
+    transformed = src @ R.T + t
+    dists, idx = tree.query(transformed, k=1)
+    mask = dists < max_corr_dist
+    n_inliers = int(mask.sum())
+
+    if n_inliers >= min_inliers:
+        p_src = src[mask]
+        q = dst[idx[mask]]
+        c, s = np.cos(theta), np.sin(theta)
+
+        # Jacobian of residual r_i = R*p_i + t - q_i wrt [x, y, theta]:
+        #   d r_i / d x     = [1, 0]
+        #   d r_i / d y     = [0, 1]
+        #   d r_i / d theta = [-s*px - c*py, c*px - s*py]
+        px, py = p_src[:, 0], p_src[:, 1]
+        Jx = np.tile(np.array([1.0, 0.0]), (n_inliers, 1))
+        Jy = np.tile(np.array([0.0, 1.0]), (n_inliers, 1))
+        Jth = np.stack([-s * px - c * py, c * px - s * py], axis=1)
+
+        H = np.zeros((3, 3))
+        for i in range(n_inliers):
+            J = np.stack([Jx[i], Jy[i], Jth[i]], axis=1)  # 2x3
+            H += J.T @ J
+
+        residual_var = max(rmse ** 2, 1e-6)
+        try:
+            cov = residual_var * np.linalg.inv(H + 1e-6 * np.eye(3))
+        except np.linalg.LinAlgError:
+            cov = np.eye(3) * 1e3
+        fitness = n_inliers / max(len(src), 1)
+    else:
+        cov = np.eye(3) * 1e3
+        fitness = 0.0
+
+    return x, y, theta, cov, fitness, n_inliers, converged, R, t
+
+
+# --------------------------------------------------------------------------
+# ROS2 node
+# --------------------------------------------------------------------------
+
+class ICPLocalizationNode(Node):
+    def __init__(self):
+        super().__init__('icp_localization_node')
+
+        # ---- parameters ----
+        self.declare_parameter('scan_topic', '/scan_filtered')
+        self.declare_parameter('odom_topic', '/odom')
+        self.declare_parameter('pose_topic', '/icp/pose')
+        self.declare_parameter('initial_pose_topic', '/initialpose')
+        self.declare_parameter('corres_point_topic', '/icp/point')
+        self.declare_parameter('require_initial_pose', True)   # wait for RViz "2D Pose Estimate" before starting
+        self.declare_parameter('frame_id', 'odom')
+        self.declare_parameter('child_frame_id', 'base_link')
+        # self.declare_parameter('use_odom_initial_guess', True)
+        self.declare_parameter('use_ekf_guess', True)
+        self.declare_parameter('downsample_step', 1)
+        self.declare_parameter('max_iterations', 40)
+        self.declare_parameter('tolerance', 1e-6)
+        self.declare_parameter('max_correspondence_distance', 0.5)
+        self.declare_parameter('robust_delta', 0.2)
+        self.declare_parameter('min_inliers', 9)
+        self.declare_parameter('min_fitness', 0.65)
+        self.declare_parameter('keyframe_trans_thresh', 0.20)   # meters
+        self.declare_parameter('keyframe_rot_thresh', 0.17)     # radians (~10 deg)
+        self.declare_parameter('cov_inflation', 1.0)
+        self.declare_parameter('cov_floor_xy', 1e-3)
+        self.declare_parameter('cov_floor_theta', 1e-5)
+        self.declare_parameter('publish_tf', False)
+        
+        gp = self.get_parameter
+        self.scan_topic = gp('scan_topic').value
+        self.odom_topic = gp('odom_topic').value
+        self.pose_topic = gp('pose_topic').value
+        self.initial_pose_topic = gp('initial_pose_topic').value
+        self.require_initial_pose = bool(gp('require_initial_pose').value)
+        self.frame_id = gp('frame_id').value
+        self.child_frame_id = gp('child_frame_id').value
+        # self.use_odom_guess = gp('use_odom_initial_guess').value
+        self.use_ekf_guess = bool(gp('use_ekf_guess').value)
+        self.downsample_step = int(gp('downsample_step').value)
+        self.max_iterations = int(gp('max_iterations').value)
+        self.tolerance = float(gp('tolerance').value)
+        self.max_corr_dist = float(gp('max_correspondence_distance').value)
+        self.robust_delta = float(gp('robust_delta').value)
+        self.min_inliers = int(gp('min_inliers').value)
+        self.min_fitness = float(gp('min_fitness').value)
+        self.kf_trans_thresh = float(gp('keyframe_trans_thresh').value)
+        self.kf_rot_thresh = float(gp('keyframe_rot_thresh').value)
+        self.cov_inflation = float(gp('cov_inflation').value)
+        self.cov_floor_xy = float(gp('cov_floor_xy').value)
+        self.cov_floor_theta = float(gp('cov_floor_theta').value)
+        self.publish_tf = bool(gp('publish_tf').value)
+        self.corres_point_topic = gp('corres_point_topic').value
+
+        # ---- state ----
+        self.ref_points = None            # reference scan point cloud (lidar frame @ ref pose)
+        self.ref_pose = None              # global (x, y, theta) at which ref_points was captured
+        self.global_pose = (0.0, 0.0, 0.0)
+        self.R = None
+        self.t = None
+        self.map_received = False
+
+        self.last_ekf_pose = None        # (x, y, theta) from /ekf_pred, for delta-guess computation
+        self.ref_ekf_pose = None         # /ekf_pred pose at the time the reference scan was taken
+
+        self.pending_init_pose = None     # (x, y, theta) set by /initialpose, consumed on next scan
+
+        # ---- pub/sub ----
+        self.scan_sub = self.create_subscription(
+            LaserScan, self.scan_topic, self.scan_callback, qos_profile_sensor_data)
+        self.initialpose_sub = self.create_subscription(
+            PoseWithCovarianceStamped, self.initial_pose_topic, self.initialpose_callback, 10)
+        self.map_sub = self.create_subscription(
+            PointCloud2,
+            '/map_pointcloud',
+            self.map_callback,
+            10
+        )
+        
+        self.pose_pub = self.create_publisher(PoseWithCovarianceStamped, self.pose_topic, 10)
+        self.point_pub = self.create_publisher(TransformStamped, self.corres_point_topic, 10)
+
+        self.ekf_sub = self.create_subscription(
+            PoseWithCovarianceStamped,
+            '/ekf_pred',
+            self.ekf_callback,
+            10
+        )
+        
+        if self.publish_tf:
+            self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
+
+        self.get_logger().info(
+            f'ICP localization node up. scan={self.scan_topic} odom={self.odom_topic} '
+            f'-> pose={self.pose_topic} (frame={self.frame_id}). '
+            f'{"Waiting for" if self.require_initial_pose else "Will default to origin if no"} '
+            f'/initialpose on {self.initial_pose_topic} before starting.')
+
+    # ------------------------------------------------------------------
+    def ekf_callback(self, msg: PoseWithCovarianceStamped):
+        q = msg.pose.pose.orientation
+        _, _, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
+        self.last_ekf_pose = (msg.pose.pose.position.x, msg.pose.pose.position.y, yaw)
+
+    # ------------------------------------------------------------------
+    def initialpose_callback(self, msg: PoseWithCovarianceStamped):
+        if msg.header.frame_id and msg.header.frame_id != self.frame_id:
+            self.get_logger().warn(
+                f'/initialpose arrived in frame "{msg.header.frame_id}" but this node publishes '
+                f'in "{self.frame_id}" — set RViz\'s Fixed Frame to "{self.frame_id}" to avoid a mismatch.')
+
+        q = msg.pose.pose.orientation
+        _, _, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
+        x = msg.pose.pose.position.x
+        y = msg.pose.pose.position.y
+
+        self.pending_init_pose = (x, y, yaw)
+        self.get_logger().info(
+            f'Received /initialpose: x={x:.3f} y={y:.3f} theta={yaw:.3f} rad — '
+            f'(re)anchoring ICP to this pose on the next scan.')
+    
+    def map_callback(self, msg: PointCloud2):
+        self.map_received = True
+    
+    # ------------------------------------------------------------------
+    def scan_callback(self, msg: LaserScan):
+        
+        if not self.map_received:
+            return
+    
+        points = laserscan_to_points(msg, self.downsample_step)
+        if len(points) < self.min_inliers:
+            self.get_logger().warn('Too few valid scan points, skipping.', throttle_duration_sec=5.0)
+            return
+
+        if self.ref_points is None or self.pending_init_pose is not None:
+            # (Re-)anchor: happens on the very first scan, and again any time a
+            # new /initialpose arrives (e.g. RViz "2D Pose Estimate" correction).
+            if self.pending_init_pose is not None:
+                origin = self.pending_init_pose
+                self.pending_init_pose = None
+            elif self.require_initial_pose:
+                self.get_logger().warn(
+                    'Waiting for /initialpose (set "2D Pose Estimate" in RViz) before starting ICP '
+                    'localization.', throttle_duration_sec=5.0)
+                return
+            else:
+                origin = (0.0, 0.0, 0.0)
+
+            self.ref_points = points
+            self.ref_pose = origin
+            self.global_pose = origin
+            self.ref_ekf_pose = self.last_ekf_pose
+            self._publish_pose(msg.header.stamp, self.global_pose, np.eye(3) * self.cov_floor_xy)
+            return
+
+        # initial guess for ICP:
+        #     expressed in the reference (lidar) frame ---
+        init_guess = (0.0, 0.0, 0.0)
+        if self.use_ekf_guess and self.last_ekf_pose is not None and self.ref_ekf_pose is not None:
+            ex, ey, eth = se2_inverse(*self.ref_ekf_pose)
+            init_guess = se2_compose(ex, ey, eth, *self.last_ekf_pose)
+
+        dx, dy, dth, cov, fitness, n_inliers, converged, self.R, self.t = icp_2d(
+            points, self.ref_points,
+            init_xytheta=init_guess,
+            max_iterations=self.max_iterations,
+            tolerance=self.tolerance,
+            max_corr_dist=self.max_corr_dist,
+            robust_delta=self.robust_delta,
+            min_inliers=self.min_inliers,
+        )
+
+        if not converged or fitness < self.min_fitness:
+            self.get_logger().warn(
+                f'ICP did not converge well (fitness={fitness:.2f}, inliers={n_inliers}); '
+                f'publishing with inflated covariance.', throttle_duration_sec=2.0)
+            cov = cov * 10.0
+
+        # global pose = ref_pose (+) delta   [delta maps current scan -> ref scan frame]
+        gx, gy, gth = se2_compose(*self.ref_pose, dx, dy, dth)
+        self.global_pose = (gx, gy, gth)
+
+        cov = cov * self.cov_inflation
+        cov[0, 0] = max(cov[0, 0], self.cov_floor_xy)
+        cov[1, 1] = max(cov[1, 1], self.cov_floor_xy)
+        cov[2, 2] = max(cov[2, 2], self.cov_floor_theta)
+
+        self.get_logger().debug(
+            f'ICP fitness={fitness:.2f} inliers={n_inliers} converged={converged}')
+        self._publish_pose(msg.header.stamp, self.global_pose, cov)
+        if self.publish_tf:
+            self._broadcast_tf(msg.header.stamp, self.global_pose)
+
+        # --- keyframe refresh: re-root the reference scan once we've
+        #     moved far enough, to keep correspondences well conditioned
+        #     and bound per-step drift growth ---
+        moved_trans = np.hypot(dx, dy)
+        moved_rot = abs((dth + np.pi) % (2 * np.pi) - np.pi)
+        if moved_trans > self.kf_trans_thresh or moved_rot > self.kf_rot_thresh:
+            self.ref_points = points
+            self.ref_pose = self.global_pose
+            self.ref_ekf_pose = self.last_ekf_pose
+
+    # ------------------------------------------------------------------
+    def _publish_pose(self, stamp, xytheta, cov3x3):
+        x, y, theta = xytheta
+        msg = PoseWithCovarianceStamped()
+        msg.header.stamp = stamp
+        msg.header.frame_id = self.frame_id
+
+        msg.pose.pose.position.x = x
+        msg.pose.pose.position.y = y
+        msg.pose.pose.position.z = 0.0
+        qx, qy, qz, qw = quaternion_from_euler(0.0, 0.0, theta)
+        msg.pose.pose.orientation.x = qx
+        msg.pose.pose.orientation.y = qy
+        msg.pose.pose.orientation.z = qz
+        msg.pose.pose.orientation.w = qw
+
+        # 6x6 row-major covariance: [x y z rot_x rot_y rot_z]
+        C = np.full((6, 6), 0.0)
+        LARGE = 1e6  # convention for "not observed" dims in a 2D pose source
+        C[2, 2] = LARGE   # z
+        C[3, 3] = LARGE   # roll
+        C[4, 4] = LARGE   # pitch
+        C[0, 0] = cov3x3[0, 0]
+        C[0, 1] = C[1, 0] = cov3x3[0, 1]
+        C[1, 1] = cov3x3[1, 1]
+        C[0, 5] = C[5, 0] = cov3x3[0, 2]
+        C[1, 5] = C[5, 1] = cov3x3[1, 2]
+        C[5, 5] = cov3x3[2, 2]
+        msg.pose.covariance = C.flatten().tolist()
+
+        self.pose_pub.publish(msg)
+        
+        transform_msg = TransformStamped()
+        
+        if self.R is not None and self.t is not None:
+            transform_msg.header.stamp = stamp
+            transform_msg.header.frame_id = self.frame_id
+            transform_msg.child_frame_id = 'icp_delta'
+            
+            transform_msg.transform.translation.x = float(self.t[0])
+            transform_msg.transform.translation.y = float(self.t[1])
+            transform_msg.transform.translation.z = 0.0
+            
+            yaw = math.atan2(self.R[1,0],self.R[0,0])
+            transform_msg.transform.rotation.x = 0.0
+            transform_msg.transform.rotation.y = 0.0
+            transform_msg.transform.rotation.z = np.sin(yaw/2.0)
+            transform_msg.transform.rotation.w = np.cos(yaw/2.0)
+        
+        self.point_pub.publish(transform_msg)
+
+    # ------------------------------------------------------------------
+    def _broadcast_tf(self, stamp, xytheta):
+        x, y, theta = xytheta
+        tf_msg = TransformStamped()
+        tf_msg.header.stamp = stamp
+        tf_msg.header.frame_id = self.frame_id
+        tf_msg.child_frame_id = self.child_frame_id
+        tf_msg.transform.translation.x = x
+        tf_msg.transform.translation.y = y
+        tf_msg.transform.translation.z = 0.0
+        qx, qy, qz, qw = quaternion_from_euler(0.0, 0.0, theta)
+        tf_msg.transform.rotation.x = qx
+        tf_msg.transform.rotation.y = qy
+        tf_msg.transform.rotation.z = qz
+        tf_msg.transform.rotation.w = qw
+        self.tf_broadcaster.sendTransform(tf_msg)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = ICPLocalizationNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+

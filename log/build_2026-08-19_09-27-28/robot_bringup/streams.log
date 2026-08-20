@@ -1,0 +1,19 @@
+[9.805s] Invoking command in '/home/vboxuser/apf_ws/src/robot_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bringup build --build-base /home/vboxuser/apf_ws/build/robot_bringup/build install --record /home/vboxuser/apf_ws/build/robot_bringup/install.log --install-scripts $base/lib/robot_bringup --single-version-externally-managed install_data
+[10.414s] running egg_info
+[10.415s] writing ../../build/robot_bringup/robot_bringup.egg-info/PKG-INFO
+[10.423s] writing dependency_links to ../../build/robot_bringup/robot_bringup.egg-info/dependency_links.txt
+[10.423s] writing requirements to ../../build/robot_bringup/robot_bringup.egg-info/requires.txt
+[10.428s] writing top-level names to ../../build/robot_bringup/robot_bringup.egg-info/top_level.txt
+[10.539s] reading manifest file '../../build/robot_bringup/robot_bringup.egg-info/SOURCES.txt'
+[10.553s] writing manifest file '../../build/robot_bringup/robot_bringup.egg-info/SOURCES.txt'
+[10.553s] running build
+[10.554s] running build_py
+[10.560s] running install
+[10.576s] running install_lib
+[10.631s] running install_data
+[10.636s] running install_egg_info
+[10.706s] removing '/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages/robot_bringup-0.0.0-py3.12.egg-info' (and everything under it)
+[10.707s] Copying ../../build/robot_bringup/robot_bringup.egg-info to /home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages/robot_bringup-0.0.0-py3.12.egg-info
+[10.718s] running install_scripts
+[11.178s] writing list of installed files to '/home/vboxuser/apf_ws/build/robot_bringup/install.log'
+[11.368s] Invoked command in '/home/vboxuser/apf_ws/src/robot_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bringup build --build-base /home/vboxuser/apf_ws/build/robot_bringup/build install --record /home/vboxuser/apf_ws/build/robot_bringup/install.log --install-scripts $base/lib/robot_bringup --single-version-externally-managed install_data

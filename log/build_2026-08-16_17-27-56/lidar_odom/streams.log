@@ -1,0 +1,28 @@
+[6.466s] Invoking command in '/home/vboxuser/apf_ws/src/lidar_odom': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/lidar_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_odom build --build-base /home/vboxuser/apf_ws/build/lidar_odom/build install --record /home/vboxuser/apf_ws/build/lidar_odom/install.log --install-scripts $base/lib/lidar_odom --single-version-externally-managed install_data
+[7.047s] running egg_info
+[7.098s] writing ../../build/lidar_odom/lidar_odom.egg-info/PKG-INFO
+[7.102s] writing dependency_links to ../../build/lidar_odom/lidar_odom.egg-info/dependency_links.txt
+[7.110s] writing entry points to ../../build/lidar_odom/lidar_odom.egg-info/entry_points.txt
+[7.111s] writing requirements to ../../build/lidar_odom/lidar_odom.egg-info/requires.txt
+[7.111s] writing top-level names to ../../build/lidar_odom/lidar_odom.egg-info/top_level.txt
+[7.296s] reading manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'
+[7.297s] writing manifest file '../../build/lidar_odom/lidar_odom.egg-info/SOURCES.txt'
+[7.297s] running build
+[7.297s] running build_py
+[7.305s] copying lidar_odom/icp_localization_node.py -> /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom
+[7.308s] running install
+[7.319s] running install_lib
+[7.421s] copying /home/vboxuser/apf_ws/build/lidar_odom/build/lib/lidar_odom/icp_localization_node.py -> /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom
+[7.421s] byte-compiling /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom/icp_localization_node.py to icp_localization_node.cpython-312.pyc
+[7.440s] running install_data
+[7.441s] running install_egg_info
+[7.493s] removing '/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom-0.0.0-py3.12.egg-info' (and everything under it)
+[7.493s] Copying ../../build/lidar_odom/lidar_odom.egg-info to /home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages/lidar_odom-0.0.0-py3.12.egg-info
+[7.495s] running install_scripts
+[8.021s] Installing cmd_robot script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+[8.021s] Installing icp_localization_node script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+[8.022s] Installing icp_mapping script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+[8.022s] Installing logger script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+[8.022s] Installing map_loader script to /home/vboxuser/apf_ws/install/lidar_odom/lib/lidar_odom
+[8.022s] writing list of installed files to '/home/vboxuser/apf_ws/build/lidar_odom/install.log'
+[8.293s] Invoked command in '/home/vboxuser/apf_ws/src/lidar_odom' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/lidar_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/lidar_odom/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_odom build --build-base /home/vboxuser/apf_ws/build/lidar_odom/build install --record /home/vboxuser/apf_ws/build/lidar_odom/install.log --install-scripts $base/lib/lidar_odom --single-version-externally-managed install_data

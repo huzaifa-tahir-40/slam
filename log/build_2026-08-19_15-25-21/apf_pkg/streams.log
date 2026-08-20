@@ -1,0 +1,23 @@
+[3.459s] Invoking command in '/home/vboxuser/apf_ws/src/apf_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/apf_pkg build --build-base /home/vboxuser/apf_ws/build/apf_pkg/build install --record /home/vboxuser/apf_ws/build/apf_pkg/install.log --install-scripts $base/lib/apf_pkg --single-version-externally-managed install_data
+[3.938s] running egg_info
+[3.972s] writing ../../build/apf_pkg/apf_pkg.egg-info/PKG-INFO
+[3.982s] writing dependency_links to ../../build/apf_pkg/apf_pkg.egg-info/dependency_links.txt
+[3.982s] writing entry points to ../../build/apf_pkg/apf_pkg.egg-info/entry_points.txt
+[3.983s] writing requirements to ../../build/apf_pkg/apf_pkg.egg-info/requires.txt
+[3.983s] writing top-level names to ../../build/apf_pkg/apf_pkg.egg-info/top_level.txt
+[4.083s] reading manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+[4.085s] writing manifest file '../../build/apf_pkg/apf_pkg.egg-info/SOURCES.txt'
+[4.086s] running build
+[4.087s] running build_py
+[4.088s] running install
+[4.097s] running install_lib
+[4.151s] running install_data
+[4.151s] running install_egg_info
+[4.200s] removing '/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[4.201s] Copying ../../build/apf_pkg/apf_pkg.egg-info to /home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages/apf_pkg-0.0.0-py3.12.egg-info
+[4.203s] running install_scripts
+[4.496s] Installing apf_controller script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+[4.499s] Installing apf_node script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+[4.500s] Installing logger script to /home/vboxuser/apf_ws/install/apf_pkg/lib/apf_pkg
+[4.500s] writing list of installed files to '/home/vboxuser/apf_ws/build/apf_pkg/install.log'
+[4.599s] Invoked command in '/home/vboxuser/apf_ws/src/apf_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/apf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/apf_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/apf_pkg build --build-base /home/vboxuser/apf_ws/build/apf_pkg/build install --record /home/vboxuser/apf_ws/build/apf_pkg/install.log --install-scripts $base/lib/apf_pkg --single-version-externally-managed install_data

@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000166] (-) JobUnselected: {'identifier': 'apf_pkg'}
+[0.000194] (-) JobUnselected: {'identifier': 'lidar_odom'}
+[0.000211] (-) JobUnselected: {'identifier': 'log_pkg'}
+[0.000223] (-) JobUnselected: {'identifier': 'odom_cmd'}
+[0.000236] (-) EventReactorShutdown: {}

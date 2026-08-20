@@ -1,0 +1,19 @@
+[3.707s] Invoking command in '/home/vboxuser/apf_ws/src/log_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/log_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/log_pkg build --build-base /home/vboxuser/apf_ws/build/log_pkg/build install --record /home/vboxuser/apf_ws/build/log_pkg/install.log --install-scripts $base/lib/log_pkg --single-version-externally-managed install_data
+[4.333s] running egg_info
+[4.389s] writing ../../build/log_pkg/log_pkg.egg-info/PKG-INFO
+[4.389s] writing dependency_links to ../../build/log_pkg/log_pkg.egg-info/dependency_links.txt
+[4.389s] writing requirements to ../../build/log_pkg/log_pkg.egg-info/requires.txt
+[4.389s] writing top-level names to ../../build/log_pkg/log_pkg.egg-info/top_level.txt
+[4.486s] reading manifest file '../../build/log_pkg/log_pkg.egg-info/SOURCES.txt'
+[4.486s] writing manifest file '../../build/log_pkg/log_pkg.egg-info/SOURCES.txt'
+[4.499s] running build
+[4.499s] running build_py
+[4.499s] running install
+[4.499s] running install_lib
+[4.593s] running install_data
+[4.594s] running install_egg_info
+[4.650s] removing '/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages/log_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[4.651s] Copying ../../build/log_pkg/log_pkg.egg-info to /home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages/log_pkg-0.0.0-py3.12.egg-info
+[4.654s] running install_scripts
+[4.947s] writing list of installed files to '/home/vboxuser/apf_ws/build/log_pkg/install.log'
+[5.037s] Invoked command in '/home/vboxuser/apf_ws/src/log_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vboxuser/apf_ws/build/log_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/apf_ws/install/log_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/log_pkg build --build-base /home/vboxuser/apf_ws/build/log_pkg/build install --record /home/vboxuser/apf_ws/build/log_pkg/install.log --install-scripts $base/lib/log_pkg --single-version-externally-managed install_data
