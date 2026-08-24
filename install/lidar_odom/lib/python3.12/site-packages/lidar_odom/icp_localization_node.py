@@ -486,6 +486,7 @@ class ICPLocalizationNode(Node):
             transform_msg.transform.translation.z = 0.0
             
             yaw = math.atan2(self.R[1,0],self.R[0,0])
+            yaw = wrap_angle(yaw)
             transform_msg.transform.rotation.x = 0.0
             transform_msg.transform.rotation.y = 0.0
             transform_msg.transform.rotation.z = np.sin(yaw/2.0)
