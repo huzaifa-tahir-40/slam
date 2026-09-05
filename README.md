@@ -129,7 +129,7 @@ ICP (Iterative Closest Point) is a point-cloud registration algorithm introduced
 
 The ICP algorithm finds the transformation (rotation matrix R and translation vector t) such that we can transform the current scan to the previous scan. This is an optimization problem, and it turns out that the optimal rotation matrix between the consecutive scans can be found by the covariance between associated points:
 
-$$K = \frac{1}{n}\sum_{j=1}^{n}(p_s^{(j)} - \mu_s)(q_s^{(j)} - \mu_s)^T \tag{4.3}$$
+$$K = \frac{1}{n}\sum_{j=1}^{n}(p_s^{(j)} - \mu_s)(q_s^{(j)} - \mu_s)^T$$
 
 After obtaining $K$ we can get rotation between the consecutive scans using Singular Value Decomposition of $K$:
 
@@ -141,7 +141,7 @@ $$^{P}R_Q = UV^T$$
 
 To ensure that $R \in SO(2)$ the following relation is the most often used:
 
-$$^{P}R_Q = U\begin{pmatrix}1 & 0\\ 0 & \det(U)\det(V)\end{pmatrix}V^T \tag{4.4}$$
+$$^{P}R_Q = U\begin{pmatrix}1 & 0\\ 0 & \det(U)\det(V)\end{pmatrix}V^T$$
 
 And translation is:
 
@@ -149,11 +149,11 @@ $$^{P}t_Q = q_s - {^{P}R_Q}\,p_s$$
 
 If the purpose is to transform the scan to match the map, then the scan points are transformed using the following relation (the superscript + means current scan and − means previous scan):
 
-$$p_{scan}^{+} = {^{P}R_Q}\,p_{scan}^{-} + {^{P}t_Q} \tag{4.5}$$
+$$p_{scan}^{+} = {^{P}R_Q}\,p_{scan}^{-} + {^{P}t_Q}$$
 
 If the purpose is to transform the map to match the scan then the map points are transformed using the following relation (the superscript + means current map and − means previous map):
 
-$$p_{map}^{+} = {^{P}R_Q}^{T}(p_{map}^{-} - {^{P}t_Q}) \tag{4.6}$$
+$$p_{map}^{+} = {^{P}R_Q}^{T}(p_{map}^{-} - {^{P}t_Q})$$
 
 In the results I transformed the map.
 
@@ -174,7 +174,7 @@ Then the correspondences are: $m_i = m_{j_i^{*}}$
 
 From above after estimating $^{P}R_Q$ and $^{P}t_Q$ we can get $^{P}T_Q = \begin{pmatrix}^{P}R_Q & ^{P}t_Q\\ 0 & 1\end{pmatrix}$. If we have $^{W}T_P$ from another source (e.g. odometry) we can obtain the pose of the robot using the following relation:
 
-$$^{W}T_Q = {^{W}T_P}\,{^{P}T_Q} \tag{4.7}$$
+$$^{W}T_Q = {^{W}T_P}\,{^{P}T_Q}$$
 
 <p align="center">
   <img src="images/fig15-scans-p-q.png" alt="Figure 15" width="45%">
@@ -193,13 +193,13 @@ Artificial Potential Field (APF) was first introduced by Oussama Khatib in 1986.
 
 For obstacle avoidance and navigation towards the goal a custom Potential Field is designed that becomes the control law of the robot. The goal is to design:
 
-$$U(q) = U_{att}(q) + U_{rep}(q) \tag{5.1}$$
+$$U(q) = U_{att}(q) + U_{rep}(q)$$
 
 Where $q$ contains x-y coordinates of the robot.
 
 We can obtain the force of attraction and repulsion by taking negative gradients of these fields:
 
-$$F(q) = -\nabla U_{att}(q) - \nabla U_{rep}(q) \tag{5.2}$$
+$$F(q) = -\nabla U_{att}(q) - \nabla U_{rep}(q)$$
 
 ### 5.1.1 Attractive Field
 
@@ -222,7 +222,6 @@ U_{att} =
 \dfrac{1}{2}k_{att}\lVert q - q_{goal}\rVert^{2} & : \lVert q - q_{goal}\rVert \le d \\[6pt]
 d\,k_{att}\lVert q - q_{goal}\rVert - \dfrac{1}{2}k_{att}d^{2} & : \lVert q - q_{goal}\rVert > d
 \end{cases}
-\tag{5.3}
 $$
 
 $$
@@ -231,7 +230,6 @@ $$
 \dfrac{1}{2}k_{att}(q - q_{goal}) & : \lVert q - q_{goal}\rVert \le d \\[6pt]
 \dfrac{d\,k_{att}(q - q_{goal})}{\lVert q - q_{goal}\rVert} & : \lVert q - q_{goal}\rVert > d
 \end{cases}
-\tag{5.4}
 $$
 
 Such that the gradient always show the following relation:
@@ -253,7 +251,6 @@ U_{rep} =
 \dfrac{1}{2}k_{rep}\left(\dfrac{1}{\rho_b(q)} - \dfrac{1}{\rho_0}\right)^{2} & : \rho_b(q) \le \rho_0 \\[6pt]
 0 & : \rho_b(q) > \rho_0
 \end{cases}
-\tag{5.5}
 $$
 
 Where $\rho_0$ is the region of influence and $\rho_b(q)$ is the point on the obstacle that is closest to the robot. When $\rho_b(q)$ is close to zero then $U_{rep}$ is infinity. We drop $U_{rep} = 0$ after $\rho_b(q) > \rho_0$. The gradient of repulsive potential is the following:
@@ -264,7 +261,6 @@ $$
 \dfrac{1}{2}k_{rep}\left(\dfrac{1}{\rho_b(q)} - \dfrac{1}{\rho_0}\right)\dfrac{\nabla\rho_b(q)}{\rho_b(q)^{2}} & : \rho_b(q) \le \rho_0 \\[6pt]
 0 & : \rho_b(q) > \rho_0
 \end{cases}
-\tag{5.6}
 $$
 
 Where,
@@ -336,7 +332,7 @@ $$f(x_k, u_k) \approx f(x_0, u_k) + \left.\frac{\partial f}{\partial x_k}\right|
 
 Using MMSE the best estimate of $x_k$ is given by conditional expectation. It turns out that the predicted state is just the measurement obtained at operating points.
 
-$$\hat{x}_{k+1|k} = f(x_k, u_k) \tag{6.1}$$
+$$\hat{x}_{k+1|k} = f(x_k, u_k)$$
 
 In order to propagate uncertainty we also need the covariance of the predicted state.
 
@@ -344,7 +340,7 @@ $$P_{k+1|k} = F_k\,E\big((x - \hat{x}_k)(x - \hat{x}_k)^T \mid Y_k\big)\,F_k^T +
 
 Using the conditional covariance of gaussian it turns out that the covariance of predicted state is:
 
-$$P_{k+1|k} = F_k P_k F_k^T + G_k Q_k G_k^T \tag{6.2}$$
+$$P_{k+1|k} = F_k P_k F_k^T + G_k Q_k G_k^T$$
 
 Where:
 
@@ -361,7 +357,7 @@ Where $v_{k+1} \in \mathcal{N}(\boldsymbol{0}, \boldsymbol{M_k})$ is the measure
 
 We also linearize $h(x_{k+1}, u_{k+1})$ and find that:
 
-$$y_{k+1} = C\,x_{k+1} + v_{k+1} \tag{6.3}$$
+$$y_{k+1} = C\,x_{k+1} + v_{k+1}$$
 
 Where $C = \left.\dfrac{\partial h}{\partial x_k}\right|_{x_{k+1|k}, u_{k+1}}(x_{k+1} - x_{k+1|k})$.
 
@@ -400,13 +396,13 @@ $$K_{k+1} = Cov(x_{k+1}, y_{k+1}\mid Y_k)\cdot Cov(y_{k+1}\mid Y_k)^{-1} = P_{k+
 
 Therefore, in the most simplistic way if the measurement model and state model predicted same values then the current state is equal to the predicted state. If they were not the same then the difference between $\big(y_{k+1} - E(y_{k+1}\mid Y_k)\big)$ is scaled by the Kalman gain $K_{k+1}$ and added to predicted state to provide the best estimate of the state:
 
-$$\hat{x}_{k+1\mid k+1} = \hat{x}_{k+1\mid k} + K_{k+1}\big(y_{k+1} - E(y_{k+1}\mid Y_k)\big) \tag{6.4}$$
+$$\hat{x}_{k+1\mid k+1} = \hat{x}_{k+1\mid k} + K_{k+1}\big(y_{k+1} - E(y_{k+1}\mid Y_k)\big)$$
 
 To be ready for the next time index we also need to propagate the covariance $P$ in the correction step:
 
 $$P_{k+1\mid k+1} = P_{k+1\mid k} - P_{k+1\mid k}C_{k+1}^T\big(C_{k+1}P_{k+1\mid k}C_{k+1}^T + Cov(v_{k+1})\big)^{-1}C_{k+1}P_{k+1\mid k}$$
 
-$$P_{k+1\mid k+1} = (I - K_{k+1}C_{k+1})\,P_{k+1\mid k} \tag{6.5}$$
+$$P_{k+1\mid k+1} = (I - K_{k+1}C_{k+1})\,P_{k+1\mid k}  $$
 
 ### 6.1.4 Filter Equations
 
@@ -462,7 +458,6 @@ x_k + \Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\cos\theta_k + \dot\varphi_L\dfra
 y_k + \Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\sin\theta_k + \dot\varphi_L\dfrac{r_L}{2}\sin\theta_k\right) \\[8pt]
 \theta_k + \Delta t\left(\dot\varphi_R\dfrac{r_R}{2b} - \dot\varphi_L\dfrac{r_L}{2b}\right)
 \end{pmatrix}
-\tag{6.6}
 $$
 
 $$u_k = \begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}\begin{pmatrix}\dot\varphi_R\\ \dot\varphi_L\end{pmatrix}$$
@@ -476,7 +471,6 @@ F_k = \frac{\partial f}{\partial x} =
 0 & 1 & \Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\cos\theta_k + \dot\varphi_L\dfrac{r_L}{2}\cos\theta_k\right) \\[8pt]
 0 & 0 & 1
 \end{pmatrix}
-\tag{6.7}
 $$
 
 $$
@@ -486,7 +480,6 @@ G_k = \frac{\partial f}{\partial u} =
 \Delta t\dfrac{r_R}{2}\sin\theta_k & \Delta t\dfrac{r_L}{2}\sin\theta_k \\[8pt]
 \Delta t\dfrac{r_R}{2b} & -\Delta t\dfrac{r_L}{2b}
 \end{pmatrix}
-\tag{6.8}
 $$
 
 Then covariance of odometry can be propagated using:
@@ -509,7 +502,6 @@ But for simplicity simpler measurement is assumed. Instead of $^{W}T_Q$ homogene
 
 $$
 z_{meas} = C\begin{bmatrix}x_{icp}\\ y_{icp}\\ \theta_{icp}\end{bmatrix}
-\tag{6.9}
 $$
 
 Where the Jacobian $C$ is identity:
@@ -526,7 +518,6 @@ Where $R = Cov(v_{k+1})$ the covariance of measurement noise, better performance
 
 $$
 R = \begin{pmatrix}\sigma_{xx} & 0 & 0\\ 0 & \sigma_{yy} & 0\\ 0 & 0 & \sigma_{\theta\theta}\end{pmatrix}
-\tag{6.10}
 $$
 
 Where $\sigma_{xx}$, $\sigma_{yy}$, and $\sigma_{\theta\theta}$ are variance of estimates of x-y position and yaw-angle.
