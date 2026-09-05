@@ -53,9 +53,24 @@ $$v_C = \frac{v_L + v_R}{2}$$
 Using simple geometry we can obtain linear and angular velocities in the cartesian plane:
 
 $$
-\dot{\boldsymbol{x}} = \begin{pmatrix}\dot{x}\\ \dot{y}\\ \dot{\theta}\end{pmatrix} =
-\begin{pmatrix}\cos(\theta) & -\sin(\theta) & 0\\ \sin(\theta) & \cos(\theta) & 0\\ 0 & 0 & 1\end{pmatrix}
-\begin{pmatrix}v\\ 0\\ w\end{pmatrix}
+\dot{\boldsymbol{x}}
+=
+\begin{pmatrix}
+\dot{x}\\
+\dot{y}\\
+\dot{\theta}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos(\theta) & -\sin(\theta) & 0\\
+\sin(\theta) & \cos(\theta) & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+v\\
+0\\
+w
+\end{pmatrix}
 \tag{3.1}
 $$
 
@@ -101,7 +116,15 @@ As we load the map, shown in Figure-8 and Figure-9, it appears that it is away f
 
 If every x-y point on the map, w.r.t the world frame, is represented by a vector $\boldsymbol{p}$ then the map can be transformed using the initial pose of the robot. The initial pose includes a rotation matrix $R$ and scaling by translation vector $\mathbf{t}$.
 
-$$\boldsymbol{p}_{map} = R^{T}(\boldsymbol{p}_{map} - \boldsymbol{t}) \tag{4.1}$$
+$$
+\boldsymbol{p}_{map}
+=
+R^{T}
+\left(
+\boldsymbol{p}_{map} - \boldsymbol{t}
+\right)
+\tag{4.1}
+$$
 
 Following are the results:
 
@@ -110,7 +133,14 @@ Following are the results:
 
 So **effectively here I am transforming the map to match the scan.** To transform the scan instead, the following transform can be used on scan points.
 
-$$\boldsymbol{p}_{scan} = t + R\, \boldsymbol{p}_{scan} \tag{4.2}$$
+$$
+\boldsymbol{p}_{scan}
+=
+\boldsymbol{t}
++
+R\,\boldsymbol{p}_{scan}
+\tag{4.2}
+$$
 
 ### 4.1.1 Using Iterative Closest Point Algorithm (ICP)
 
@@ -128,7 +158,15 @@ ICP (Iterative Closest Point) is a point-cloud registration algorithm introduced
 
 The ICP algorithm finds the transformation (rotation matrix R and translation vector t) such that we can transform the current scan to the previous scan. This is an optimization problem, and it turns out that the optimal rotation matrix between the consecutive scans can be found by the covariance between associated points:
 
-$$K = \frac{1}{n}\sum_{j=1}^{n}(p_s^{(j)} - \mu_s)(q_s^{(j)} - \mu_s)^T \tag{4.3}$$
+$$
+K
+=
+\frac{1}{n}
+\sum_{j=1}^{n}
+\left(p_s^{(j)}-\mu_s\right)
+\left(q_s^{(j)}-\mu_s\right)^{T}
+\tag{4.3}
+$$
 
 After obtaining $K$ we can get rotation between the consecutive scans using Singular Value Decomposition of $K$:
 
@@ -140,7 +178,17 @@ $$^{P}R_Q = UV^T$$
 
 To ensure that $R \in SO(2)$ the following relation is the most often used:
 
-$$^{P}R_Q = U\begin{pmatrix}1 & 0\\ 0 & \det(U)\det(V)\end{pmatrix}V^T \tag{4.4}$$
+$$
+{}^{P}R_{Q}
+=
+U
+\begin{pmatrix}
+1 & 0\\
+0 & \det(U)\det(V)
+\end{pmatrix}
+V^{T}
+\tag{4.4}
+$$
 
 And translation is:
 
@@ -148,11 +196,28 @@ $$^{P}t_Q = q_s - {^{P}R_Q}\,p_s$$
 
 If the purpose is to transform the scan to match the map, then the scan points are transformed using the following relation (the superscript + means current scan and − means previous scan):
 
-$$p_{scan}^{+} = {^{P}R_Q}\,p_{scan}^{-} + {^{P}t_Q} \tag{4.5}$$
+$$
+p_{scan}^{+}
+=
+{}^{P}R_{Q}\,p_{scan}^{-}
++
+{}^{P}t_{Q}
+\tag{4.5}
+$$
 
 If the purpose is to transform the map to match the scan then the map points are transformed using the following relation (the superscript + means current map and − means previous map):
 
-$$p_{map}^{+} = {^{P}R_Q}^{T}(p_{map}^{-} - {^{P}t_Q}) \tag{4.6}$$
+$$
+p_{map}^{+}
+=
+\left({}^{P}R_{Q}\right)^{T}
+\left(
+p_{map}^{-}
+-
+{}^{P}t_{Q}
+\right)
+\tag{4.6}
+$$
 
 In the results I transformed the map.
 
@@ -173,7 +238,12 @@ Then the correspondences are: $m_i = m_{j_i^{*}}$
 
 From above after estimating $^{P}R_Q$ and $^{P}t_Q$ we can get $^{P}T_Q = \begin{pmatrix}^{P}R_Q & ^{P}t_Q\\ 0 & 1\end{pmatrix}$. If we have $^{W}T_P$ from another source (e.g. odometry) we can obtain the pose of the robot using the following relation:
 
-$$^{W}T_Q = {^{W}T_P}\,{^{P}T_Q} \tag{4.7}$$
+$$
+{}^{W}T_{Q}
+=
+{}^{W}T_{P}\,{}^{P}T_{Q}
+\tag{4.7}
+$$
 
 <p align="center">
   <img src="images/fig15-scans-p-q.png" alt="Figure 15" width="45%">
@@ -192,13 +262,27 @@ Artificial Potential Field (APF) was first introduced by Oussama Khatib in 1986.
 
 For obstacle avoidance and navigation towards the goal a custom Potential Field is designed that becomes the control law of the robot. The goal is to design:
 
-$$U(q) = U_{att}(q) + U_{rep}(q) \tag{5.1}$$
+$$
+U(q)
+=
+U_{att}(q)
++
+U_{rep}(q)
+\tag{5.1}
+$$
 
 Where $q$ contains x-y coordinates of the robot.
 
 We can obtain the force of attraction and repulsion by taking negative gradients of these fields:
 
-$$F(q) = -\nabla U_{att}(q) - \nabla U_{rep}(q) \tag{5.2}$$
+$$
+F(q)
+=
+-\nabla U_{att}(q)
+-
+\nabla U_{rep}(q)
+\tag{5.2}
+$$
 
 ### 5.1.1 Attractive Field
 
@@ -216,19 +300,34 @@ For the correct attractive potential $U_{att}$ we set the following criterions:
 It is observed that the above attractive potential can go to infinity if the distance between $q$ and $q_{goal}$ was infinity which could force the robot to travel at infinity speed. So the simplest attractive potential does not obey the 2nd criterion. Also we don't want to clip the forces to zero at desired position because that can introduce discontinuities. What is really need is to get a linear relation, up to some threshold, when the robot is approaching close to goal it stops slowly while also appreciating continuity in the set bounds. That is why we use quadratic function in the attractive field equation.
 
 $$
-U_{att} =
+U_{att}
+=
 \begin{cases}
-\dfrac{1}{2}k_{att}\lVert q - q_{goal}\rVert^{2} & : \lVert q - q_{goal}\rVert \le d \\[6pt]
-d\,k_{att}\lVert q - q_{goal}\rVert - \dfrac{1}{2}k_{att}d^{2} & : \lVert q - q_{goal}\rVert > d
+\dfrac{1}{2}k_{att}\lVert q-q_{goal}\rVert^{2},
+&
+\lVert q-q_{goal}\rVert \le d
+\\[6pt]
+d\,k_{att}\lVert q-q_{goal}\rVert
+-
+\dfrac{1}{2}k_{att}d^{2},
+&
+\lVert q-q_{goal}\rVert > d
 \end{cases}
 \tag{5.3}
 $$
 
 $$
-\nabla U_{att} =
+\nabla U_{att}
+=
 \begin{cases}
-\dfrac{1}{2}k_{att}(q - q_{goal}) & : \lVert q - q_{goal}\rVert \le d \\[6pt]
-\dfrac{d\,k_{att}(q - q_{goal})}{\lVert q - q_{goal}\rVert} & : \lVert q - q_{goal}\rVert > d
+\dfrac{1}{2}k_{att}(q-q_{goal}),
+&
+\lVert q-q_{goal}\rVert \le d
+\\[6pt]
+\dfrac{d\,k_{att}(q-q_{goal})}
+{\lVert q-q_{goal}\rVert},
+&
+\lVert q-q_{goal}\rVert > d
 \end{cases}
 \tag{5.4}
 $$
@@ -247,10 +346,21 @@ The goal of repulsive potential field $U_{rep}(q)$ is to keep the particle (robo
 Like $U_{att}$ is global field, we want $U_{rep}$ local such that it acts on the robot only when the robot is near the obstacle up to some threshold.
 
 $$
-U_{rep} =
+U_{rep}
+=
 \begin{cases}
-\dfrac{1}{2}k_{rep}\left(\dfrac{1}{\rho_b(q)} - \dfrac{1}{\rho_0}\right)^{2} & : \rho_b(q) \le \rho_0 \\[6pt]
-0 & : \rho_b(q) > \rho_0
+\dfrac{1}{2}k_{rep}
+\left(
+\dfrac{1}{\rho_b(q)}
+-
+\dfrac{1}{\rho_0}
+\right)^{2},
+&
+\rho_b(q)\le\rho_0
+\\[6pt]
+0,
+&
+\rho_b(q)>\rho_0
 \end{cases}
 \tag{5.5}
 $$
@@ -258,10 +368,23 @@ $$
 Where $\rho_0$ is the region of influence and $\rho_b(q)$ is the point on the obstacle that is closest to the robot. When $\rho_b(q)$ is close to zero then $U_{rep}$ is infinity. We drop $U_{rep} = 0$ after $\rho_b(q) > \rho_0$. The gradient of repulsive potential is the following:
 
 $$
-\nabla U_{rep} =
+\nabla U_{rep}
+=
 \begin{cases}
-\dfrac{1}{2}k_{rep}\left(\dfrac{1}{\rho_b(q)} - \dfrac{1}{\rho_0}\right)\dfrac{\nabla\rho_b(q)}{\rho_b(q)^{2}} & : \rho_b(q) \le \rho_0 \\[6pt]
-0 & : \rho_b(q) > \rho_0
+\dfrac{1}{2}k_{rep}
+\left(
+\dfrac{1}{\rho_b(q)}
+-
+\dfrac{1}{\rho_0}
+\right)
+\dfrac{\nabla\rho_b(q)}
+{\rho_b(q)^{2}},
+&
+\rho_b(q)\le\rho_0
+\\[6pt]
+0,
+&
+\rho_b(q)>\rho_0
 \end{cases}
 \tag{5.6}
 $$
@@ -335,7 +458,12 @@ $$f(x_k, u_k) \approx f(x_0, u_k) + \left.\frac{\partial f}{\partial x_k}\right|
 
 Using MMSE the best estimate of $x_k$ is given by conditional expectation. It turns out that the predicted state is just the measurement obtained at operating points.
 
-$$\hat{x}_{k+1|k} = f(x_k, u_k) \tag{6.1}$$
+$$
+\hat{x}_{k+1\mid k}
+=
+f(x_k,u_k)
+\tag{6.1}
+$$
 
 In order to propagate uncertainty we also need the covariance of the predicted state.
 
@@ -343,7 +471,14 @@ $$P_{k+1|k} = F_k\,E\big((x - \hat{x}_k)(x - \hat{x}_k)^T \mid Y_k\big)\,F_k^T +
 
 Using the conditional covariance of gaussian it turns out that the covariance of predicted state is:
 
-$$P_{k+1|k} = F_k P_k F_k^T + G_k Q_k G_k^T \tag{6.2}$$
+$$
+P_{k+1\mid k}
+=
+F_k P_k F_k^{T}
++
+G_k Q_k G_k^{T}
+\tag{6.2}
+$$
 
 Where:
 
@@ -360,7 +495,14 @@ Where $v_{k+1} \in \mathcal{N}(\boldsymbol{0}, \boldsymbol{M_k})$ is the measure
 
 We also linearize $h(x_{k+1}, u_{k+1})$ and find that:
 
-$$y_{k+1} = C\,x_{k+1} + v_{k+1} \tag{6.3}$$
+$$
+y_{k+1}
+=
+C\,x_{k+1}
++
+v_{k+1}
+\tag{6.3}
+$$
 
 Where $C = \left.\dfrac{\partial h}{\partial x_k}\right|_{x_{k+1|k}, u_{k+1}}(x_{k+1} - x_{k+1|k})$.
 
@@ -399,13 +541,33 @@ $$K_{k+1} = Cov(x_{k+1}, y_{k+1}\mid Y_k)\cdot Cov(y_{k+1}\mid Y_k)^{-1} = P_{k+
 
 Therefore, in the most simplistic way if the measurement model and state model predicted same values then the current state is equal to the predicted state. If they were not the same then the difference between $\big(y_{k+1} - E(y_{k+1}\mid Y_k)\big)$ is scaled by the Kalman gain $K_{k+1}$ and added to predicted state to provide the best estimate of the state:
 
-$$\hat{x}_{k+1\mid k+1} = \hat{x}_{k+1\mid k} + K_{k+1}\big(y_{k+1} - E(y_{k+1}\mid Y_k)\big) \tag{6.4}$$
+$$
+\hat{x}_{k+1\mid k+1}
+=
+\hat{x}_{k+1\mid k}
++
+K_{k+1}
+\left(
+y_{k+1}
+-
+E(y_{k+1}\mid Y_k)
+\right)
+\tag{6.4}
+$$
 
 To be ready for the next time index we also need to propagate the covariance $P$ in the correction step:
 
 $$P_{k+1\mid k+1} = P_{k+1\mid k} - P_{k+1\mid k}C_{k+1}^T\big(C_{k+1}P_{k+1\mid k}C_{k+1}^T + Cov(v_{k+1})\big)^{-1}C_{k+1}P_{k+1\mid k}$$
 
-$$P_{k+1\mid k+1} = (I - K_{k+1}C_{k+1})\,P_{k+1\mid k} \tag{6.5}$$
+$$
+P_{k+1\mid k+1}
+=
+\left(
+I-K_{k+1}C_{k+1}
+\right)
+P_{k+1\mid k}
+\tag{6.5}
+$$
 
 ### 6.1.4 Filter Equations
 
@@ -455,11 +617,35 @@ $$\theta_{k+1} = \theta_k + \Delta t\left(\dot\varphi_R\frac{r_R}{2b} - \dot\var
 The state-space is:
 
 $$
-f(x_{k+1}, u_k) =
+f(x_{k+1},u_k)
+=
 \begin{pmatrix}
-x_k + \Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\cos\theta_k + \dot\varphi_L\dfrac{r_L}{2}\cos\theta_k\right) \\[8pt]
-y_k + \Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\sin\theta_k + \dot\varphi_L\dfrac{r_L}{2}\sin\theta_k\right) \\[8pt]
-\theta_k + \Delta t\left(\dot\varphi_R\dfrac{r_R}{2b} - \dot\varphi_L\dfrac{r_L}{2b}\right)
+x_k
++
+\Delta t
+\left(
+\dot{\varphi}_R\dfrac{r_R}{2}\cos\theta_k
++
+\dot{\varphi}_L\dfrac{r_L}{2}\cos\theta_k
+\right)
+\\[8pt]
+y_k
++
+\Delta t
+\left(
+\dot{\varphi}_R\dfrac{r_R}{2}\sin\theta_k
++
+\dot{\varphi}_L\dfrac{r_L}{2}\sin\theta_k
+\right)
+\\[8pt]
+\theta_k
++
+\Delta t
+\left(
+\dot{\varphi}_R\dfrac{r_R}{2b}
+-
+\dot{\varphi}_L\dfrac{r_L}{2b}
+\right)
 \end{pmatrix}
 \tag{6.6}
 $$
@@ -469,21 +655,46 @@ $$u_k = \begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}\begin{pmatrix}\dot\varphi_R\\ 
 The Jacobians of state-space is:
 
 $$
-F_k = \frac{\partial f}{\partial x} =
+F_k
+=
+\frac{\partial f}{\partial x}
+=
 \begin{pmatrix}
-1 & 0 & -\Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\sin\theta_k + \dot\varphi_L\dfrac{r_L}{2}\sin\theta_k\right) \\[8pt]
-0 & 1 & \Delta t\left(\dot\varphi_R\dfrac{r_R}{2}\cos\theta_k + \dot\varphi_L\dfrac{r_L}{2}\cos\theta_k\right) \\[8pt]
+1 & 0 &
+-\Delta t
+\left(
+\dot{\varphi}_R\dfrac{r_R}{2}\sin\theta_k
++
+\dot{\varphi}_L\dfrac{r_L}{2}\sin\theta_k
+\right)
+\\[8pt]
+0 & 1 &
+\Delta t
+\left(
+\dot{\varphi}_R\dfrac{r_R}{2}\cos\theta_k
++
+\dot{\varphi}_L\dfrac{r_L}{2}\cos\theta_k
+\right)
+\\[8pt]
 0 & 0 & 1
 \end{pmatrix}
 \tag{6.7}
 $$
 
 $$
-G_k = \frac{\partial f}{\partial u} =
+G_k
+=
+\frac{\partial f}{\partial u}
+=
 \begin{pmatrix}
-\Delta t\dfrac{r_R}{2}\cos\theta_k & \Delta t\dfrac{r_L}{2}\cos\theta_k \\[8pt]
-\Delta t\dfrac{r_R}{2}\sin\theta_k & \Delta t\dfrac{r_L}{2}\sin\theta_k \\[8pt]
-\Delta t\dfrac{r_R}{2b} & -\Delta t\dfrac{r_L}{2b}
+\Delta t\dfrac{r_R}{2}\cos\theta_k &
+\Delta t\dfrac{r_L}{2}\cos\theta_k
+\\[8pt]
+\Delta t\dfrac{r_R}{2}\sin\theta_k &
+\Delta t\dfrac{r_L}{2}\sin\theta_k
+\\[8pt]
+\Delta t\dfrac{r_R}{2b} &
+-\Delta t\dfrac{r_L}{2b}
 \end{pmatrix}
 \tag{6.8}
 $$
@@ -507,7 +718,14 @@ Which is the reason why performing $\big(y_{k+1} - E(y_{k+1}\mid Y_k)\big)$ is n
 But for simplicity simpler measurement is assumed. Instead of $^{W}T_Q$ homogeneous transformation matrix we just obtain x-y position and yaw angle. Thus the measurement model of ICP pose estimation is:
 
 $$
-z_{meas} = C\begin{bmatrix}x_{icp}\\ y_{icp}\\ \theta_{icp}\end{bmatrix}
+z_{meas}
+=
+C
+\begin{bmatrix}
+x_{icp}\\
+y_{icp}\\
+\theta_{icp}
+\end{bmatrix}
 \tag{6.9}
 $$
 
@@ -524,7 +742,13 @@ $$K_{k+1} = P_{k+1\mid k}C_{k+1}^T\big(C_{k+1}P_{k+1\mid k}C_{k+1}^T + R\big)^{-
 Where $R = Cov(v_{k+1})$ the covariance of measurement noise, better performance of Kalman Filter involve tuning the covariance matrix:
 
 $$
-R = \begin{pmatrix}\sigma_{xx} & 0 & 0\\ 0 & \sigma_{yy} & 0\\ 0 & 0 & \sigma_{\theta\theta}\end{pmatrix}
+R
+=
+\begin{pmatrix}
+\sigma_{xx} & 0 & 0\\
+0 & \sigma_{yy} & 0\\
+0 & 0 & \sigma_{\theta\theta}
+\end{pmatrix}
 \tag{6.10}
 $$
 
