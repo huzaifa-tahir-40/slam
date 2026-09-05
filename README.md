@@ -101,7 +101,7 @@ As we load the map, shown in Figure-8 and Figure-9, it appears that it is away f
 
 If every x-y point on the map, w.r.t the world frame, is represented by a vector $\boldsymbol{p}$ then the map can be transformed using the initial pose of the robot. The initial pose includes a rotation matrix $R$ and scaling by translation vector $\mathbf{t}$.
 
-$$\boldsymbol{p}_{map} = R^{T}(\boldsymbol{p}_{map} - \boldsymbol{t}) \tag{4.1}$$
+$$\boldsymbol{p}_{map} = R^{T}(\boldsymbol{p}_{map} - \boldsymbol{t})$$
 
 Following are the results:
 
