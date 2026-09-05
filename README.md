@@ -52,7 +52,6 @@ $$v_C = \frac{v_L + v_R}{2}$$
 
 Using simple geometry we can obtain linear and angular velocities in the cartesian plane:
 
-$$
 \dot{\boldsymbol{x}}
 =
 \begin{pmatrix}
@@ -72,7 +71,6 @@ v\\
 w
 \end{pmatrix}
 \tag{3.1}
-$$
 
 And then use the forward Euler rule to get position of mobile robot w.r.t the origin where it started moving. With sampling $\Delta t$:
 
