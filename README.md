@@ -111,7 +111,7 @@ Following are the results:
 
 So **effectively here I am transforming the map to match the scan.** To transform the scan instead, the following transform can be used on scan points.
 
-$$\boldsymbol{p}_{scan} = t + R\, \boldsymbol{p}_{scan} \tag{4.2}$$
+$$\boldsymbol{p}_{scan} = t + R\, \boldsymbol{p}_{scan}$$
 
 ### 4.1.1 Using Iterative Closest Point Algorithm (ICP)
 
