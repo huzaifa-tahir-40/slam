@@ -54,7 +54,9 @@ Using simple geometry we can obtain linear and angular velocities in the cartesi
 
 $$
 \dot{\boldsymbol{x}} = \begin{pmatrix}\dot{x}\\ \dot{y}\\ \dot{\theta}\end{pmatrix} =
-\begin{pmatrix}\cos(\theta) & -\sin(\theta) & 0\\ \sin(\theta) & \cos(\theta) & 0\\ 0 & 0 & 1\end{pmatrix}
+\begin{pmatrix}\cos(\theta) & -\sin(\theta) & 0
+\\ \sin(\theta) & \cos(\theta) & 0
+\\ 0 & 0 & 1\end{pmatrix}
 \begin{pmatrix}v\\ 0\\ w\end{pmatrix}
 $$
 
